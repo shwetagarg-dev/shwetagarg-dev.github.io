@@ -31,7 +31,7 @@ const PROFILE = {
   title: "AI Research Lead",
   location: "Santa Clara, CA",
   tagline:
-    "I heads applied research in code intelligence and interactive agents at AWS, translating cutting-edge science into products that transform developer workflows through Kiro IDE and Amazon Q Developer.",
+    "I head applied research in code intelligence and interactive agents at AWS, translating cutting-edge science into products that transform developer workflows through Kiro IDE and Amazon Q Developer.",
   email: "k.varun@outlook.com",
   website: "",
   // If this image fails to load, a fallback with initials will render.
