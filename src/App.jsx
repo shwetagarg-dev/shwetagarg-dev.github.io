@@ -28,7 +28,7 @@ import { Badge } from "./components/ui/badge";
 
 const PROFILE = {
   name: "Shweta Garg",
-  title: "Senior Applied Scientist",
+  title: "AI Research Lead",
   location: "Santa Clara, CA",
   tagline:
     "Senior Applied Scientist with 13+ years leading cross-functional teams and scaling AI systems to deliver impactful ML products. Proven track record of translating research into scalable solutions and shaping org-level science strategy.",
@@ -68,7 +68,7 @@ const PROFILE = {
 };
 
 const HIGHLIGHTS = [
-  { icon: Briefcase, label: "Role", value: "Senior Applied Scientist" },
+  { icon: Briefcase, label: "Role", value: "AI Research Lead" },
   { icon: Presentation, label: "Talks", value: "KDD, Adobe, Uber" },
   { icon: BookOpen, label: "Publications", value: "6+ papers" },
   { icon: Award, label: "Experience", value: "13+ years" },
@@ -116,62 +116,7 @@ const PUBLICATIONS = [
     links: [],
     tags: ["Answer Selection", "NLP"],
   },
-  {
-    title: "Entity-Product Linking to Improve Search Experience for Context-of-Use Entities",
-    authors: [
-      "A. Anantharaman",
-      "S. Garg",
-      "A. Kiezun", 
-      "J. Snyder",
-      "S. Artzi"
-    ],
-    venue: "Multi-faceted Understanding of Products and Shopper Intent Workshop (AMLC)",
-    year: "2020",
-    links: [],
-    tags: ["Entity Linking", "Search"],
-  },
-  {
-    title: "Automating High Quality Query-Widget Targeting in Search",
-    authors: [
-      "A. Boteanu",
-      "S. Garg",
-      "G.Y. Kristianto",
-      "Q. Zhang",
-      "A. Kiezun",
-      "J. Snyder", 
-      "S. Artzi"
-    ],
-    venue: "Search Workshop (AMLC)",
-    year: "2020",
-    links: [],
-    tags: ["Search", "Automation"],
-  },
-  {
-    title: "Recurrent Attention Models for Question-Answering",
-    authors: [
-      "S. Garg",
-      "S. H. Sengamedu",
-      "N. Rasiwasia"
-    ],
-    venue: "AMLC",
-    year: "2018",
-    links: [],
-    tags: ["Question Answering", "Attention Models"],
-  },
-  {
-    title: "Question-Answering on Amazon Detail Pages",
-    authors: [
-      "V. Bansal",
-      "S. Garg",
-      "K. Mehta",
-      "A. Kulkarni",
-      "S. H. Sengamedu"
-    ],
-    venue: "AMLC",
-    year: "2017",
-    links: [],
-    tags: ["Question Answering", "E-commerce"],
-  },
+
 ];
 
 const PROJECTS = [
