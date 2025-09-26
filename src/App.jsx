@@ -23,16 +23,16 @@ import { Button } from "./components/ui/button";
 import { Badge } from "./components/ui/badge";
 
 // =====================
-// ⚙️ PERSONALIZED PROFILE DATA (Varun Kumar)
+// ⚙️ PERSONALIZED PROFILE DATA (Shweta Garg)
 // =====================
 
 const PROFILE = {
-  name: "Varun Kumar",
-  title: "AI Research Lead",
+  name: "Shweta Garg",
+  title: "Senior Applied Scientist",
   location: "Santa Clara, CA",
   tagline:
-    "I head applied research in code intelligence and interactive agents at AWS, translating cutting-edge science into products that transform developer workflows through Kiro IDE and Amazon Q Developer.",
-  email: "k.varun@outlook.com",
+    "Senior Applied Scientist with 13+ years leading cross-functional teams and scaling AI systems to deliver impactful ML products. Proven track record of translating research into scalable solutions and shaping org-level science strategy.",
+  email: "shwetagarg2006@gmail.com",
   website: "",
   // If this image fails to load, a fallback with initials will render.
   avatarUrl: "/assets/profile.jpg",
@@ -40,12 +40,12 @@ const PROFILE = {
     {
       label: "GitHub",
       icon: Github,
-      href: "https://github.com/varunkumar-dev",
+      href: "https://github.com/shwetagarg-dev",
     },
     {
       label: "LinkedIn",
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/varunin",
+      href: "https://www.linkedin.com/in/shwetagarg2006",
     },
     {
       label: "Google Scholar",
@@ -55,95 +55,122 @@ const PROFILE = {
     {
       label: "Amazon Science",
       icon: Globe,
-      href: "https://www.amazon.science/author/varun-kumar",
+      href: "https://www.amazon.science/author/shweta-garg",
     },
   ],
   interests: [
-    "Code Intelligence",
-    "Generative AI for Code",
-    "Agentic AI",
-    "Reinforcement Learning",
-    "Responsible & Fair AI",
+    "Question Answering",
+    "Natural Language Processing",
+    "Search Technologies", 
+    "Machine Learning",
+    "AI Systems",
   ],
 };
 
 const HIGHLIGHTS = [
-  { icon: Briefcase, label: "Leadership", value: "Coding Agents Science, AWS" },
-  { icon: Presentation, label: "Products", value: "Kiro IDE, Q Developer" },
-  { icon: BookOpen, label: "Research", value: "30+ papers" },
-  { icon: GraduationCap, label: "Service", value: "ACL & COLM Area Chair" },
+  { icon: Briefcase, label: "Role", value: "Senior Applied Scientist" },
+  { icon: Presentation, label: "Talks", value: "KDD, Adobe, Uber" },
+  { icon: BookOpen, label: "Publications", value: "6+ papers" },
+  { icon: Award, label: "Experience", value: "13+ years" },
 ];
 
 const NEWS = [
   {
     date: "2025‑08‑25",
-    text: "EMNLP 2025: Planning-Aware Code Infilling via Horizon-Length Prediction accepted.",
-    href: "https://arxiv.org/abs/2410.03103",
+    text: "Speaking at KDD 2025 AI Reasoning Day on AI Teammates for Modern Developers",
+    href: "#",
   },
   {
-    date: "2025‑07‑14",
-    text: "Launched Kiro IDE, 100k+ users in first 7 days",
-    href: "https://kiro.dev/",
-  },
-  {
-    date: "2025‑02‑20",
-    text: "Read my Amazon Science blog on LeDex—training LLMs to self‑debug & explain code (NeurIPS 2024)",
-    href: "https://www.amazon.science/blog/training-code-generation-models-to-debug-their-own-outputs",
+    date: "2025‑08‑01", 
+    text: "Invited talks at Adobe HQ and Uber on AI Teammates for Developer Productivity",
+    href: "#",
   },
 ];
 
 const PUBLICATIONS = [
   {
-    title: "On Mitigating Code LLM Hallucinations with API Documentation",
+    title: "ProductQnA: Answering User Questions on E-Commerce Product Pages",
     authors: [
-      "Nihal Jain",
-      "Robert Kwiatkowski",
-      "Baishakhi Ray",
-      "Murali K. Ramanathan",
-      "Varun Kumar",
+      "A. Kulkarni*",
+      "K. Mehta*", 
+      "S. Garg*",
+      "V. Bansal*",
+      "N. Rasiwasia",
+      "S. H. Sengamedu"
     ],
-    venue: "ICSE",
-    year: "2025",
-    links: [{ label: "Paper", href: "https://arxiv.org/abs/2407.09726" }],
-    tags: ["Code LLMs", "Hallucination Mitigation"],
+    venue: "ECNLP (WWW)",
+    year: "2019",
+    links: [],
+    tags: ["Question Answering", "E-commerce"],
   },
   {
-    title: "Fewer Truncations Improve Language Modeling",
+    title: "Improving Answer Selection and Answer Triggering using Hard Negatives",
     authors: [
-      "Hantian Ding",
-      "Zijian Wang",
-      "Giovanni Paolini",
-      "Varun Kumar",
-      "et al.",
+      "S. Kumar",
+      "S. Garg", 
+      "K. Mehta",
+      "N. Rasiwasia"
     ],
-    venue: "ICML",
-    year: "2024",
-    links: [{ label: "Paper", href: "https://arxiv.org/abs/2404.10830" }],
-    tags: ["Pre-training", "LLMs", "Hallucination"],
+    venue: "EMNLP",
+    year: "2019",
+    links: [],
+    tags: ["Answer Selection", "NLP"],
   },
   {
-    title: "LeDex: Training LLMs to Better Self‑Debug and Explain Code",
+    title: "Entity-Product Linking to Improve Search Experience for Context-of-Use Entities",
     authors: [
-      "Nan Jiang",
-      "Xiaopeng Li",
-      "Shiqi Wang",
-      "Qiang Zhou",
-      "Varun Kumar",
-      "et al.",
+      "A. Anantharaman",
+      "S. Garg",
+      "A. Kiezun", 
+      "J. Snyder",
+      "S. Artzi"
     ],
-    venue: "NeurIPS",
-    year: "2024",
-    links: [{ label: "Paper", href: "https://arxiv.org/abs/2405.18649" }],
-    tags: ["Reinforcement Learning", "Code Intelligence"],
+    venue: "Multi-faceted Understanding of Products and Shopper Intent Workshop (AMLC)",
+    year: "2020",
+    links: [],
+    tags: ["Entity Linking", "Search"],
   },
   {
-    title:
-      "BOLD: Dataset and Metrics for Measuring Biases in Open-Ended Language Generation",
-    authors: ["Jwala Dhamala", "Tony Sun", "Varun Kumar", "et al."],
-    venue: "ACM FAccT",
-    year: "2021",
-    links: [{ label: "Paper", href: "https://arxiv.org/abs/2101.11718" }],
-    tags: ["Fairness", "Evaluation", "LLMs"],
+    title: "Automating High Quality Query-Widget Targeting in Search",
+    authors: [
+      "A. Boteanu",
+      "S. Garg",
+      "G.Y. Kristianto",
+      "Q. Zhang",
+      "A. Kiezun",
+      "J. Snyder", 
+      "S. Artzi"
+    ],
+    venue: "Search Workshop (AMLC)",
+    year: "2020",
+    links: [],
+    tags: ["Search", "Automation"],
+  },
+  {
+    title: "Recurrent Attention Models for Question-Answering",
+    authors: [
+      "S. Garg",
+      "S. H. Sengamedu",
+      "N. Rasiwasia"
+    ],
+    venue: "AMLC",
+    year: "2018",
+    links: [],
+    tags: ["Question Answering", "Attention Models"],
+  },
+  {
+    title: "Question-Answering on Amazon Detail Pages",
+    authors: [
+      "V. Bansal",
+      "S. Garg",
+      "K. Mehta",
+      "A. Kulkarni",
+      "S. H. Sengamedu"
+    ],
+    venue: "AMLC",
+    year: "2017",
+    links: [],
+    tags: ["Question Answering", "E-commerce"],
   },
 ];
 

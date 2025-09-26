@@ -1,8 +1,8 @@
 {
-  "name": "varunkumar-portfolio",
+  "name": "shwetagarg-portfolio",
   "version": "1.0.0",
   "type": "module",
-  "description": "Personal portfolio website for Varun Kumar",
+  "description": "Personal portfolio website for Shweta Garg",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
