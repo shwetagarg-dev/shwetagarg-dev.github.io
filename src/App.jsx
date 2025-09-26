@@ -31,7 +31,7 @@ const PROFILE = {
   title: "AI Research Lead",
   location: "Santa Clara, CA",
   tagline:
-    "Senior Applied Scientist with 13+ years leading cross-functional teams and scaling AI systems to deliver impactful ML products. Proven track record of translating research into scalable solutions and shaping org-level science strategy.",
+    "AI Research Lead with 13+ years leading cross-functional teams and scaling AI systems to deliver impactful ML products. Proven track record of translating research into scalable solutions and shaping org-level science strategy.",
   email: "shwetagarg2006@gmail.com",
   website: "",
   // If this image fails to load, a fallback with initials will render.
@@ -374,7 +374,7 @@ export default function App() {
           <div className="mt-14">
             <Section id="about" title="About">
               <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
-                As a Senior Applied Science Manager at AWS, I lead the science
+                As an AI Research Lead at AWS, I lead the science
                 team for Kiro IDE and Amazon Q Developer, building large
                 language models and AI agents. These products transform how
                 millions of developers write, debug, and understand code through
