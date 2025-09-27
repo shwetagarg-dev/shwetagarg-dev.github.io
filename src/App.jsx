@@ -38,11 +38,6 @@ email: "shwetagarg2006@gmail.com",
   avatarUrl: "/assets/profile.jpg",
   socials: [
     {
-      label: "GitHub",
-      icon: Github,
-      href: "https://github.com/shwetagarg-dev",
-    },
-    {
       label: "LinkedIn",
       icon: Linkedin,
       href: "https://www.linkedin.com/in/shwetagargiitb/",
@@ -50,12 +45,7 @@ email: "shwetagarg2006@gmail.com",
     {
       label: "Google Scholar",
       icon: BookOpen,
-      href: "https://scholar.google.com/citations?user=d-La2lQAAAAJ&hl=en",
-    },
-    {
-      label: "Amazon Science",
-      icon: Globe,
-      href: "https://www.amazon.science/author/shweta-garg",
+      href: "https://scholar.google.com/citations?user=Q92AH78AAAAJ&hl=en",
     },
   ],
   interests: [
@@ -400,14 +390,14 @@ export default function App() {
                 ))}
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                <Button asChild>
-                  <a href="#contact">
+              <div className="mt-6 flex flex-wrap items-center gap-4 w-full">
+                <Button asChild className="flex-1 min-w-[120px]">
+                  <a href="mailto:shwetagarg2006@gmail.com">
                     <Mail className="w-4 h-4 mr-2" /> Contact
                   </a>
                 </Button>
                 {PROFILE.socials.map(({ label, icon: Icon, href }) => (
-                  <Button key={label} variant="ghost" size="sm" asChild>
+                  <Button key={label} variant="ghost" size="sm" asChild className="flex-1 min-w-[120px]">
                     <a
                       href={href}
                       target="_blank"
@@ -705,15 +695,6 @@ export default function App() {
                       <Button asChild>
                         <a href={`mailto:${PROFILE.email}`}>
                           <Mail className="w-4 h-4 mr-2" /> Email me
-                        </a>
-                      </Button>
-                      <Button asChild variant="outline">
-                        <a
-                          href="https://x.com/varun_kr"
-                          target="https://x.com/varun_kr"
-                          rel="noreferrer"
-                        >
-                          <Globe className="w-4 h-4 mr-2" /> X
                         </a>
                       </Button>
                     </div>
