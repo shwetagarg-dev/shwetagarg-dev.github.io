@@ -1,9 +1,9 @@
 #!/bin/bash
-echo "Cleaning old build files..."
+echo "🧹 Cleaning ALL build files and caches..."
 rm -f index.html
-rm -rf assets dist
+rm -rf assets dist node_modules/.vite
 
-echo "Restoring template..."
+echo "📝 Restoring build template..."
 cat > index.html << 'EOF'
 <!doctype html>
 <html lang="en">
@@ -20,12 +20,26 @@ cat > index.html << 'EOF'
 </html>
 EOF
 
-echo "Building site..."
+echo "🔨 Building production site..."
 npm run build
-echo "Copying to root..."
+
+if [ $? -ne 0 ]; then
+    echo "❌ Build failed! Fix errors and try again."
+    exit 1
+fi
+
+echo "📁 Copying build files to root..."
 cp -r dist/* .
-echo "Deploying to GitHub..."
+
+echo "📤 Committing and deploying to GitHub..."
 git add .
-git commit -m "Deploy site updates"
+git commit -m "Deploy site updates - $(date '+%Y-%m-%d %H:%M')"
 git push origin master
-echo "Done! Site will update in 2-3 minutes."
+
+if [ $? -eq 0 ]; then
+    echo "✅ Deployed successfully!"
+    echo "🌐 Site will update at https://shwetagarg-dev.github.io/ in 2-3 minutes"
+else
+    echo "❌ Deploy failed! Check git status."
+    exit 1
+fi

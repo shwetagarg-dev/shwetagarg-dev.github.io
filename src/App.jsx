@@ -45,7 +45,7 @@ email: "shwetagarg2006@gmail.com",
     {
       label: "LinkedIn",
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/shwetagarg2006",
+      href: "https://www.linkedin.com/in/shwetagargiitb/",
     },
     {
       label: "Google Scholar",
@@ -59,11 +59,9 @@ email: "shwetagarg2006@gmail.com",
     },
   ],
   interests: [
-    "Question Answering",
-    "Natural Language Processing",
-    "Search Technologies", 
-    "Machine Learning",
-    "AI Systems",
+    "Code Intelligence",
+    "Generative AI for Code", 
+    "Agentic AI",
   ],
 };
 
