@@ -31,8 +31,8 @@ const PROFILE = {
   title: "AI Research Lead",
   location: "Santa Clara, CA",
   tagline:
-    "AI Research Lead with 13+ years leading cross-functional teams and scaling AI systems to deliver impactful ML products. Proven track record of translating research into scalable solutions and shaping org-level science strategy.",
-  email: "shwetagarg2006@gmail.com",
+	"At AWS, I lead applied research in code intelligence and interactive agents, shaping products like Kiro IDE and Amazon Q Developer. With 13+ years of experience, I have led cross-functional teams and scaled AI systems to deliver impactful machine learning products.",  
+email: "shwetagarg2006@gmail.com",
   website: "",
   // If this image fails to load, a fallback with initials will render.
   avatarUrl: "/assets/profile.jpg",
@@ -76,6 +76,11 @@ const HIGHLIGHTS = [
 
 const NEWS = [
   {
+    date: "2025‑09‑01",
+    text: "Speaking at Grenoble Informatics Laboratory (LIG) on Collaborative AI in Code and Conversation",
+    href: "#",
+  },
+  {
     date: "2025‑08‑25",
     text: "Speaking at KDD 2025 AI Reasoning Day on AI Teammates for Modern Developers",
     href: "#",
@@ -87,7 +92,64 @@ const NEWS = [
   },
 ];
 
+const INVITED_TALKS = [
+  {
+    title: "Agents Among Us: The Rise of Collaborative AI in Code and Conversation",
+    venue: "Grenoble Informatics Laboratory (LIG)",
+    date: "Sept 2025",
+  },
+  {
+    title: "Collaborative Coding Agents for Interactive Development and Codebase Modernization",
+    venue: "GitHub Copilot",
+    date: "Sept 2025",
+  },
+  {
+    title: "AI Teammates for the Modern Developer",
+    venue: "AI Reasoning Day @ KDD",
+    date: "Aug 2025",
+  },
+  {
+    title: "From Code to Customer Journeys: AI Teammates for the Experience Platform Era",
+    venue: "Adobe HQ",
+    date: "Aug 2025",
+  },
+  {
+    title: "From Code to Impact: AI Teammates for Developer Productivity and Reliability",
+    venue: "Uber",
+    date: "Aug 2025",
+  },
+];
+
+const WORKSHOP_ORGANIZATION = [
+  {
+    title: "AAAI 2026 Workshop on Next-Gen Code Development with Collaborative AI Agents",
+    role: "Organizer",
+    year: "2026",
+    status: "upcoming",
+  },
+  {
+    title: "AMLC 2020 Workshop on Multi-faceted Understanding of Products and Shopper Intent",
+    role: "Organizer", 
+    year: "2020",
+    status: "completed",
+  },
+];
+
 const PUBLICATIONS = [
+  {
+    title: "CodeAssistBench (CAB): Dataset & Benchmarking for Multi-turn Chat-Based Code Assistance",
+    authors: [
+      "M. Kim",
+      "S. Garg",
+      "B. Ray",
+      "V. Kumar",
+      "A. Deoras"
+    ],
+    venue: "NeurIPS",
+    year: "2025",
+    links: [],
+    tags: ["Code Assistance", "Benchmarking"],
+  },
   {
     title: "ProductQnA: Answering User Questions on E-Commerce Product Pages",
     authors: [
@@ -116,7 +178,48 @@ const PUBLICATIONS = [
     links: [],
     tags: ["Answer Selection", "NLP"],
   },
-
+  {
+    title: "Entity-Product Linking to Improve Search Experience for Context-of-Use Entities",
+    authors: [
+      "A. Anantharaman",
+      "S. Garg",
+      "A. Kiezun",
+      "J. Snyder",
+      "S. Artzi"
+    ],
+    venue: "AMLC Workshop",
+    year: "2020",
+    links: [],
+    tags: ["Entity Linking", "Search"],
+  },
+  {
+    title: "Automating High Quality Query-Widget Targeting in Search",
+    authors: [
+      "A. Boteanu",
+      "S. Garg",
+      "G.Y. Kristianto",
+      "Q. Zhang",
+      "A. Kiezun",
+      "J. Snyder",
+      "S. Artzi"
+    ],
+    venue: "AMLC Workshop",
+    year: "2020",
+    links: [],
+    tags: ["Search", "Automation"],
+  },
+  {
+    title: "Recurrent Attention Models for Question-Answering",
+    authors: [
+      "S. Garg",
+      "S. H. Sengamedu",
+      "N. Rasiwasia"
+    ],
+    venue: "AMLC",
+    year: "2018",
+    links: [],
+    tags: ["Question Answering", "Attention Models"],
+  },
 ];
 
 const PROJECTS = [
@@ -148,7 +251,9 @@ const PROJECTS = [
 
 const SERVICES = [
   { role: "Area Chair", venue: "ACL 2025, COLM 2025" },
-  { role: "Reviewer", venue: "NeurIPS, ICLR, ICML, EMNLP, NAACL, ACL" },
+  { role: "Reviewer", venue: "ACL ARR 2025 (Feb, May), ICLR 2025 Workshop (DL4C), TheWebConf 2024, AMLC" },
+  { role: "Scientific Review Bar Raiser", venue: "Led evaluation of 20+ A/B experiment designs across Amazon Search, Relevance, and UI features" },
+  { role: "Mentorship & Leadership", venue: "Mentored 100+ scientists and engineers; featured in Women in Tech Day and COTA panels" },
 ];
 
 const SKILLS = [
@@ -242,7 +347,9 @@ export default function App() {
               {[
                 ["About", "about"],
                 ["Research", "research"],
+                ["Talks", "talks"],
                 ["Publications", "publications"],
+                ["Workshops", "workshops"],
                 ["Projects", "projects"],
                 ["Contact", "contact"],
               ].map(([label, id]) => (
@@ -427,6 +534,27 @@ export default function App() {
             </Section>
           </div>
 
+          {/* Invited Talks */}
+          <div className="mt-10">
+            <Section id="talks" title="Invited Talks">
+              <ol className="space-y-3">
+                {INVITED_TALKS.map((talk, idx) => (
+                  <li
+                    key={idx}
+                    className="p-4 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60"
+                  >
+                    <h3 className="font-semibold text-lg leading-snug">
+                      {talk.title}
+                    </h3>
+                    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                      {talk.venue} • {talk.date}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </Section>
+          </div>
+
           {/* Publications */}
           <div className="mt-10">
             <Section id="publications" title="Selected Publications">
@@ -501,6 +629,32 @@ export default function App() {
                   </Card>
                 ))}
               </div>
+            </Section>
+          </div>
+
+          {/* Workshop Organization */}
+          <div className="mt-10">
+            <Section id="workshops" title="Workshop Organization">
+              <ol className="space-y-3">
+                {WORKSHOP_ORGANIZATION.map((workshop, idx) => (
+                  <li
+                    key={idx}
+                    className="p-4 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60"
+                  >
+                    <div className="flex flex-wrap items-baseline gap-2">
+                      <h3 className="font-semibold text-lg leading-snug">
+                        {workshop.title}
+                      </h3>
+                      {workshop.status === "upcoming" && (
+                        <Pill>Upcoming</Pill>
+                      )}
+                    </div>
+                    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                      {workshop.role} • {workshop.year}
+                    </div>
+                  </li>
+                ))}
+              </ol>
             </Section>
           </div>
 
