@@ -31,7 +31,7 @@ const PROFILE = {
   title: "AI Research Lead",
   location: "Santa Clara, CA",
   tagline:
-	"At AWS, I lead applied research in code intelligence and interactive agents, shaping products like Kiro IDE and Amazon Q Developer. With 13+ years of experience, I have led cross-functional teams and scaled AI systems to deliver impactful machine learning products.",  
+	"At AWS, I lead applied research in code intelligence and interactive agents, shaping the Kiro IDE and Amazon Q Developer products. With 13+ years of experience, I have led cross-functional teams and scaled AI systems to deliver impactful machine learning solutions.",  
 email: "shwetagarg2006@gmail.com",
   website: "",
   // If this image fails to load, a fallback with initials will render.
@@ -64,19 +64,67 @@ const HIGHLIGHTS = [
 
 const NEWS = [
   {
-    date: "2025‑09‑01",
-    text: "Speaking at Grenoble Informatics Laboratory (LIG) on Collaborative AI in Code and Conversation",
-    href: "#",
+    date: "2025‑09‑18",
+    text: (
+      <>
+        Our paper{" "}
+        <a 
+          href="https://arxiv.org/abs/2507.10646" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          CodeAssistBench (CAB): Dataset & Benchmarking for Multi-turn Chat-Based Code Assistance
+        </a>{" "}
+        accepted to NeurIPS 2025
+      </>
+    ),
+    href: null,
   },
   {
-    date: "2025‑08‑25",
-    text: "Speaking at KDD 2025 AI Reasoning Day on AI Teammates for Modern Developers",
-    href: "#",
+    date: "2025‑08‑29",
+    text: (
+      <>
+        Our workshop,{" "}
+        <a 
+          href="https://sites.google.com/view/next-gen-code-agents-aaai26" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          Next-Gen Code Development with Collaborative AI Agents
+        </a>
+        , accepted as a one-day workshop at AAAI-26, Singapore, January 20–27, 2026
+      </>
+    ),
+    href: null,
   },
   {
     date: "2025‑08‑01", 
-    text: "Invited talks at Adobe HQ and Uber on AI Teammates for Developer Productivity",
-    href: "#",
+    text: (
+      <>
+        Delivered talks on collaborative AI coding agents at{" "}
+        <a 
+          href="https://ai-reasoning.github.io/" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          KDD Day on AI Reasoning
+        </a>
+        ,{" "}
+        <a 
+          href="https://www.liglab.fr/en/laboratory-overview/scientific-animation/keynote-speeches/keynote-lig-behrooz-omidvar-tehrani-shweta-garg" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          Grenoble Informatics Laboratory (LIG)
+        </a>
+        , GitHub Copilot, Adobe HQ, and Uber
+      </>
+    ),
+    href: null,
   },
 ];
 
@@ -333,8 +381,6 @@ export default function App() {
             </a>
             <div className="hidden md:flex gap-6 text-sm">
               {[
-                ["About", "about"],
-                ["Research", "research"],
                 ["Talks", "talks"],
                 ["Publications", "publications"],
                 ["Workshops", "workshops"],
@@ -413,22 +459,28 @@ export default function App() {
               <div className="mt-10">
                 <h3 className="text-lg font-semibold mb-3">Latest News</h3>
                 <div className="flex flex-col gap-2">
-                  {NEWS.map((n) => (
+                  {NEWS.map((n, idx) => (
                     <div
-                      key={n.text}
+                      key={idx}
                       className="inline-flex items-start gap-2 text-sm"
                     >
                       <Calendar className="w-4 h-4 mt-0.5" aria-hidden />
-                      <a
-                        href={n.href}
-                        className="group hover:underline underline-offset-4"
-                      >
+                      <div className="group">
                         <span className="text-zinc-500 dark:text-zinc-400 mr-2">
                           {n.date}
                         </span>
-                        {n.text}
-                        <ChevronRight className="w-4 h-4 inline-block -mb-0.5 opacity-0 group-hover:opacity-100 transition" />
-                      </a>
+                        {n.href ? (
+                          <a
+                            href={n.href}
+                            className="hover:underline underline-offset-4"
+                          >
+                            {n.text}
+                            <ChevronRight className="w-4 h-4 inline-block -mb-0.5 opacity-0 group-hover:opacity-100 transition" />
+                          </a>
+                        ) : (
+                          <span>{n.text}</span>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -463,63 +515,6 @@ export default function App() {
                 </div>
               </CardContent>
             </Card>
-          </div>
-
-          {/* About */}
-          <div className="mt-14">
-            <Section id="about" title="About">
-              <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">
-                As an AI Research Lead at AWS, I lead the science
-                team for Kiro IDE and Amazon Q Developer, building large
-                language models and AI agents. These products transform how
-                millions of developers write, debug, and understand code through
-                advanced language models and agentic workflows. Code
-                intelligence fascinates me because it represents a unique form
-                of AI where we can rigorously verify outcomes at massive scale,
-                creating unprecedented opportunities for reliable human-AI
-                collaboration.
-              </p>
-              <p className="mt-4 leading-relaxed text-zinc-700 dark:text-zinc-300">
-                Previously, I helped launch Alexa's deep learning
-                models and advanced fairness methods across large language
-                models. I graduated from University of Maryland, College Park,
-                where I worked on human-in-the-loop machine learning systems.
-              </p>
-            </Section>
-          </div>
-
-          {/* Research Focus */}
-          <div className="mt-10">
-            <Section id="research" title="Research Focus">
-              <div className="grid md:grid-cols-3 gap-4">
-                {[
-                  {
-                    title: "Code Intelligence",
-                    desc: "LLMs for code, evaluation, and safety at production scale.",
-                  },
-                  {
-                    title: "Agentic AI",
-                    desc: "Autonomous coding workflows optimized with online RL.",
-                  },
-                  {
-                    title: "Responsible AI",
-                    desc: "Robustness, fairness, and debiasing for agents.",
-                  },
-                ].map((item) => (
-                  <Card
-                    key={item.title}
-                    className="border-zinc-200/60 dark:border-zinc-800/60"
-                  >
-                    <CardContent className="p-5">
-                      <h3 className="font-semibold">{item.title}</h3>
-                      <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
-                        {item.desc}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </Section>
           </div>
 
           {/* Invited Talks */}
