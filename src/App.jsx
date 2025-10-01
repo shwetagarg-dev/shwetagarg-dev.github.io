@@ -164,11 +164,7 @@ const WORKSHOP_ORGANIZATION = [
     role: "Organizer",
     year: "2026",
     status: "upcoming",
-  },
-  {
-    title: "AMLC 2020 Workshop on Multi-faceted Understanding of Products & Shopper Intent",
-    role: "Organizer", 
-    year: "2020",
+    href: "https://sites.google.com/view/next-gen-code-agents-aaai26",
   },
 ];
 
@@ -240,7 +236,6 @@ const PROJECTS = [
 
 const SERVICES = [
   { role: "Reviewer Service", venue: "ACL ARR 2025, ICLR 2025 Workshop (DL4C), TheWebConf 2024, and AMLC" },
-  { role: "Tutorial Contribution", venue: "Delivered a 3-hour tutorial on Deep Neural Networks for NLP, training hundreds of engineers, scientists, and product managers across Amazon Worldwide" },
   { role: "Scientific Review Bar Raiser", venue: "Led the evaluation of 20+ A/B experiment designs across Amazon Search, Relevance, and UI features, ensuring high-quality scientific rigor and adherence to best practices" },
   { role: "Mentorship & Leadership", venue: "Mentored 100+ scientists and engineers through 1:1 guidance, cross-organizational initiatives, and leadership forums; featured in panel discussions at Women in Tech Day and COTA" },
 ];
@@ -582,47 +577,47 @@ export default function App() {
           {/* Community */}
           <div className="mt-10">
             <Section id="community" title="Community">
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-semibold text-lg mb-3">Workshop Organization</h4>
-                  <ol className="space-y-3">
-                    {WORKSHOP_ORGANIZATION.map((workshop, idx) => (
-                      <li
-                        key={idx}
-                        className="p-4 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60"
-                      >
-                        <div className="flex flex-wrap items-baseline gap-2">
-                          <h3 className="font-semibold text-lg leading-snug">
-                            {workshop.title}
-                          </h3>
-                          {workshop.status === "upcoming" && (
-                            <Pill>Upcoming</Pill>
-                          )}
-                        </div>
-                        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                          {workshop.role} • {workshop.year}
-                        </div>
-                      </li>
-                    ))}
-                  </ol>
-                </div>
+              <div className="space-y-3">
+                {WORKSHOP_ORGANIZATION.map((workshop, idx) => (
+                  <li
+                    key={idx}
+                    className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-3"
+                  >
+                    <div className="font-medium">Workshop Organization</div>
+                    <div className="text-sm text-zinc-600 dark:text-zinc-400">
+                      <div className="flex items-center gap-2">
+                        <span>{workshop.title}</span>
+                        {workshop.href && (
+                          <Button
+                            size="sm"
+                            variant="secondary"
+                            asChild
+                            className="h-auto px-1.5 py-1 text-xs min-h-0"
+                          >
+                            <a href={workshop.href} target="_blank" rel="noreferrer">
+                              Link
+                            </a>
+                          </Button>
+                        )}
+                        {workshop.status === "upcoming" && (
+                          <Pill>Upcoming</Pill>
+                        )}
+                      </div>
+                    </div>
+                  </li>
+                ))}
                 
-                <div>
-                  <h4 className="font-semibold text-lg mb-3">Service</h4>
-                  <ul className="space-y-2">
-                    {SERVICES.map((s) => (
-                      <li
-                        key={s.role + s.venue}
-                        className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-3"
-                      >
-                        <div className="font-medium">{s.role}</div>
-                        <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                          {s.venue}
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {SERVICES.map((s) => (
+                  <li
+                    key={s.role + s.venue}
+                    className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-3"
+                  >
+                    <div className="font-medium">{s.role}</div>
+                    <div className="text-sm text-zinc-600 dark:text-zinc-400">
+                      {s.venue}
+                    </div>
+                  </li>
+                ))}
               </div>
             </Section>
           </div>
