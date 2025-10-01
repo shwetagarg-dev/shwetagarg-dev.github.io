@@ -56,10 +56,10 @@ email: "shwetagarg2006@gmail.com",
 };
 
 const HIGHLIGHTS = [
-  { icon: Briefcase, label: "Role", value: "AI Research Lead" },
-  { icon: Presentation, label: "Talks", value: "KDD, Adobe, Uber" },
-  { icon: BookOpen, label: "Publications", value: "6+ papers" },
-  { icon: Award, label: "Experience", value: "13+ years" },
+  { icon: Briefcase, label: "Products", value: (<>Kiro IDE,<br />Q Developer</>) },
+  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />10+ papers</>) },
+  { icon: Award, label: "Organizer", value: "Workshops @ AAAI & AMLC" },
+  { icon: Presentation, label: "Invited", value: (<>5+ talks &<br />panels</>) },
 ];
 
 const NEWS = [
@@ -67,7 +67,7 @@ const NEWS = [
     date: "2025‑09‑18",
     text: (
       <>
-        Our paper{" "}
+        Paper{" "}
         <a 
           href="https://arxiv.org/abs/2507.10646" 
           target="_blank" 
@@ -76,7 +76,7 @@ const NEWS = [
         >
           CodeAssistBench (CAB): Dataset & Benchmarking for Multi-turn Chat-Based Code Assistance
         </a>{" "}
-        accepted to NeurIPS 2025
+        accepted at NeurIPS 2025
       </>
     ),
     href: null,
@@ -85,7 +85,7 @@ const NEWS = [
     date: "2025‑08‑29",
     text: (
       <>
-        Our workshop,{" "}
+        Workshop{" "}
         <a 
           href="https://sites.google.com/view/next-gen-code-agents-aaai26" 
           target="_blank" 
@@ -93,8 +93,8 @@ const NEWS = [
           className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
         >
           Next-Gen Code Development with Collaborative AI Agents
-        </a>
-        , accepted as a one-day workshop at AAAI-26, Singapore, January 20–27, 2026
+        </a>{" "}
+        accepted as a one-day event at AAAI-26, Singapore, Jan 20–27, 2026
       </>
     ),
     href: null,
@@ -133,16 +133,12 @@ const INVITED_TALKS = [
     title: "Agents Among Us: The Rise of Collaborative AI in Code and Conversation",
     venue: "Grenoble Informatics Laboratory (LIG)",
     date: "Sept 2025",
+    href: "https://www.liglab.fr/en/laboratory-overview/scientific-animation/keynote-speeches/keynote-lig-behrooz-omidvar-tehrani-shweta-garg",
   },
   {
     title: "Collaborative Coding Agents for Interactive Development and Codebase Modernization",
     venue: "GitHub Copilot",
     date: "Sept 2025",
-  },
-  {
-    title: "AI Teammates for the Modern Developer",
-    venue: "AI Reasoning Day @ KDD",
-    date: "Aug 2025",
   },
   {
     title: "From Code to Customer Journeys: AI Teammates for the Experience Platform Era",
@@ -154,6 +150,12 @@ const INVITED_TALKS = [
     venue: "Uber",
     date: "Aug 2025",
   },
+  {
+    title: "AI Teammates for the Modern Developer",
+    venue: "AI Reasoning Day @ KDD",
+    date: "Aug 2025",
+    href: "https://ai-reasoning.github.io/",
+  },
 ];
 
 const WORKSHOP_ORGANIZATION = [
@@ -164,10 +166,9 @@ const WORKSHOP_ORGANIZATION = [
     status: "upcoming",
   },
   {
-    title: "AMLC 2020 Workshop on Multi-faceted Understanding of Products and Shopper Intent",
+    title: "AMLC 2020 Workshop on Multi-faceted Understanding of Products & Shopper Intent",
     role: "Organizer", 
     year: "2020",
-    status: "completed",
   },
 ];
 
@@ -183,8 +184,25 @@ const PUBLICATIONS = [
     ],
     venue: "NeurIPS",
     year: "2025",
-    links: [],
+    links: [
+      { label: "PDF", href: "https://arxiv.org/pdf/2507.10646" }
+    ],
     tags: ["Code Assistance", "Benchmarking"],
+  },
+  {
+    title: "Improving Answer Selection and Answer Triggering using Hard Negatives",
+    authors: [
+      "S. Kumar",
+      "S. Garg", 
+      "K. Mehta",
+      "N. Rasiwasia"
+    ],
+    venue: "EMNLP",
+    year: "2019",
+    links: [
+      { label: "PDF", href: "https://aclanthology.org/D19-1604.pdf" }
+    ],
+    tags: ["Answer Selection", "NLP"],
   },
   {
     title: "ProductQnA: Answering User Questions on E-Commerce Product Pages",
@@ -198,63 +216,10 @@ const PUBLICATIONS = [
     ],
     venue: "ECNLP (WWW)",
     year: "2019",
-    links: [],
+    links: [
+      { label: "PDF", href: "https://assets.amazon.science/92/27/6409b2524ab194ba62e4d2c53d02/productqna-answering-user-questions-on-e-commerce-product-pages.pdf" }
+    ],
     tags: ["Question Answering", "E-commerce"],
-  },
-  {
-    title: "Improving Answer Selection and Answer Triggering using Hard Negatives",
-    authors: [
-      "S. Kumar",
-      "S. Garg", 
-      "K. Mehta",
-      "N. Rasiwasia"
-    ],
-    venue: "EMNLP",
-    year: "2019",
-    links: [],
-    tags: ["Answer Selection", "NLP"],
-  },
-  {
-    title: "Entity-Product Linking to Improve Search Experience for Context-of-Use Entities",
-    authors: [
-      "A. Anantharaman",
-      "S. Garg",
-      "A. Kiezun",
-      "J. Snyder",
-      "S. Artzi"
-    ],
-    venue: "AMLC Workshop",
-    year: "2020",
-    links: [],
-    tags: ["Entity Linking", "Search"],
-  },
-  {
-    title: "Automating High Quality Query-Widget Targeting in Search",
-    authors: [
-      "A. Boteanu",
-      "S. Garg",
-      "G.Y. Kristianto",
-      "Q. Zhang",
-      "A. Kiezun",
-      "J. Snyder",
-      "S. Artzi"
-    ],
-    venue: "AMLC Workshop",
-    year: "2020",
-    links: [],
-    tags: ["Search", "Automation"],
-  },
-  {
-    title: "Recurrent Attention Models for Question-Answering",
-    authors: [
-      "S. Garg",
-      "S. H. Sengamedu",
-      "N. Rasiwasia"
-    ],
-    venue: "AMLC",
-    year: "2018",
-    links: [],
-    tags: ["Question Answering", "Attention Models"],
   },
 ];
 
@@ -271,25 +236,13 @@ const PROJECTS = [
       "Enterprise‑scale code intelligence platform with assistants across CLI and IDEs.",
     href: "https://aws.amazon.com/q/developer/",
   },
-  {
-    title: "Agentic Coding RL Pipeline",
-    summary: "Continuous online RL for coding agents in production.",
-    details:
-      "Full‑stack pipeline enabling iterative improvement from real‑world developer interactions.",
-  },
-  {
-    title: "Training LLMs to debug their own outputs",
-    summary:
-      "RL to improve self-debugging and code generation capabilites of code LLMs",
-    href: "https://www.amazon.science/blog/training-code-generation-models-to-debug-their-own-outputs",
-  },
 ];
 
 const SERVICES = [
-  { role: "Area Chair", venue: "ACL 2025, COLM 2025" },
-  { role: "Reviewer", venue: "ACL ARR 2025 (Feb, May), ICLR 2025 Workshop (DL4C), TheWebConf 2024, AMLC" },
-  { role: "Scientific Review Bar Raiser", venue: "Led evaluation of 20+ A/B experiment designs across Amazon Search, Relevance, and UI features" },
-  { role: "Mentorship & Leadership", venue: "Mentored 100+ scientists and engineers; featured in Women in Tech Day and COTA panels" },
+  { role: "Reviewer Service", venue: "ACL ARR 2025, ICLR 2025 Workshop (DL4C), TheWebConf 2024, and AMLC" },
+  { role: "Tutorial Contribution", venue: "Delivered a 3-hour tutorial on Deep Neural Networks for NLP, training hundreds of engineers, scientists, and product managers across Amazon Worldwide" },
+  { role: "Scientific Review Bar Raiser", venue: "Led the evaluation of 20+ A/B experiment designs across Amazon Search, Relevance, and UI features, ensuring high-quality scientific rigor and adherence to best practices" },
+  { role: "Mentorship & Leadership", venue: "Mentored 100+ scientists and engineers through 1:1 guidance, cross-organizational initiatives, and leadership forums; featured in panel discussions at Women in Tech Day and COTA" },
 ];
 
 const SKILLS = [
@@ -383,8 +336,8 @@ export default function App() {
               {[
                 ["Talks", "talks"],
                 ["Publications", "publications"],
-                ["Workshops", "workshops"],
-                ["Projects", "projects"],
+                ["Products", "projects"],
+                ["Community", "community"],
                 ["Contact", "contact"],
               ].map(([label, id]) => (
                 <a
@@ -415,7 +368,7 @@ export default function App() {
 
         {/* Hero */}
         <main id="top" className={`${container} py-10 md:py-14`}>
-          <div className="grid md:grid-cols-[1.2fr_.8fr] gap-8 items-center">
+          <div className="grid md:grid-cols-[1.2fr_.8fr] gap-6 items-center">
             <div>
               <motion.h1
                 initial={{ opacity: 0, y: 8 }}
@@ -428,15 +381,15 @@ export default function App() {
               <p className="mt-4 text-zinc-700 dark:text-zinc-300 max-w-2xl">
                 {PROFILE.tagline}
               </p>
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="mt-4 flex flex-wrap gap-3">
                 {PROFILE.interests.map((it) => (
-                  <Badge key={it} variant="secondary" className="text-xs">
+                  <Badge key={it} variant="secondary" className="text-sm">
                     {it}
                   </Badge>
                 ))}
               </div>
 
-              <div className="mt-6 flex flex-wrap items-center gap-4 w-full">
+              <div className="mt-10 flex flex-wrap items-center gap-4 w-full">
                 <Button asChild className="flex-1 min-w-[120px]">
                   <a href="mailto:shwetagarg2006@gmail.com">
                     <Mail className="w-4 h-4 mr-2" /> Contact
@@ -457,7 +410,7 @@ export default function App() {
               </div>
 
               <div className="mt-10">
-                <h3 className="text-lg font-semibold mb-3">Latest News</h3>
+                <h3 className="text-xl font-semibold tracking-tight mb-4">Latest News</h3>
                 <div className="flex flex-col gap-2">
                   {NEWS.map((n, idx) => (
                     <div
@@ -492,22 +445,22 @@ export default function App() {
                 <div className="aspect-square w-full bg-gradient-to-br from-blue-200/50 to-fuchsia-200/50 dark:from-blue-900/30 dark:to-fuchsia-900/30 flex items-center justify-center">
                   <Avatar name={PROFILE.name} src={PROFILE.avatarUrl} />
                 </div>
-                <div className="p-5">
+                <div className="p-2.5">
                   <div className="flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400">
                     <MapPin className="w-4 h-4" />
                     {PROFILE.location}
                   </div>
-                  <div className="mt-3 grid grid-cols-2 gap-3">
+                  <div className="mt-2 grid grid-cols-2 gap-1.5">
                     {HIGHLIGHTS.map(({ icon: Icon, label, value }) => (
                       <div
                         key={label}
-                        className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-3"
+                        className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-1.5"
                       >
                         <div className="text-xs text-zinc-500 dark:text-zinc-400">
                           {label}
                         </div>
-                        <div className="mt-1 flex items-center gap-2 font-semibold">
-                          <Icon className="w-4 h-4" /> {value}
+                        <div className="mt-1 flex items-center gap-1.5 font-semibold text-sm">
+                          <Icon className="w-3.5 h-3.5" /> {value}
                         </div>
                       </div>
                     ))}
@@ -518,66 +471,77 @@ export default function App() {
           </div>
 
           {/* Invited Talks */}
-          <div className="mt-10">
+          <div className="mt-8">
             <Section id="talks" title="Invited Talks">
-              <ol className="space-y-3">
+              <div className="space-y-2">
                 {INVITED_TALKS.map((talk, idx) => (
-                  <li
-                    key={idx}
-                    className="p-4 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60"
-                  >
-                    <h3 className="font-semibold text-lg leading-snug">
-                      {talk.title}
-                    </h3>
-                    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                      {talk.venue} • {talk.date}
+                  <div key={idx} className="py-2 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-b-0">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <div className="font-medium text-sm leading-tight">
+                            {talk.title}
+                          </div>
+                          {talk.href && (
+                            <Button
+                              size="sm"
+                              variant="secondary"
+                              asChild
+                              className="h-auto px-1.5 py-1 text-xs min-h-0"
+                            >
+                              <a href={talk.href} target="_blank" rel="noreferrer">
+                                Link
+                              </a>
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                      <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
+                        {talk.venue} • {talk.date}
+                      </div>
                     </div>
-                  </li>
+                  </div>
                 ))}
-              </ol>
+              </div>
             </Section>
           </div>
 
           {/* Publications */}
           <div className="mt-10">
             <Section id="publications" title="Selected Publications">
-              <ol className="space-y-4">
+              <ol className="space-y-2">
                 {PUBLICATIONS.map((p, idx) => (
                   <li
                     key={idx}
-                    className="p-4 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60"
+                    className="py-2 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-b-0"
                   >
-                    <div className="flex flex-wrap items-baseline gap-2">
-                      <h3 className="font-semibold text-lg leading-snug">
-                        {p.title}
-                      </h3>
-                      <Pill>
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-medium text-sm leading-tight">
+                            {p.title}
+                          </h3>
+                          {p.links?.map((l) => (
+                            <Button
+                              key={l.label}
+                              size="sm"
+                              variant="secondary"
+                              asChild
+                              className="h-auto px-1.5 py-1 text-xs min-h-0"
+                            >
+                              <a href={l.href} target="_blank" rel="noreferrer">
+                                {l.label}
+                              </a>
+                            </Button>
+                          ))}
+                        </div>
+                        <div className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">
+                          {p.authors.join(", ")}
+                        </div>
+                      </div>
+                      <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
                         {p.venue} {p.year}
-                      </Pill>
-                    </div>
-                    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                      {p.authors.join(", ")}
-                    </div>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {p.links?.map((l) => (
-                        <Button
-                          key={l.label}
-                          size="sm"
-                          variant="secondary"
-                          asChild
-                        >
-                          <a href={l.href} target="_blank" rel="noreferrer">
-                            {l.label}
-                          </a>
-                        </Button>
-                      ))}
-                    </div>
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {p.tags?.map((t) => (
-                        <Badge key={t} variant="outline">
-                          {t}
-                        </Badge>
-                      ))}
+                      </div>
                     </div>
                   </li>
                 ))}
@@ -587,7 +551,7 @@ export default function App() {
 
           {/* Projects */}
           <div className="mt-10">
-            <Section id="projects" title="Projects">
+            <Section id="projects" title="Products">
               <div className="grid md:grid-cols-2 gap-4">
                 {PROJECTS.map((proj) => (
                   <Card
@@ -615,60 +579,50 @@ export default function App() {
             </Section>
           </div>
 
-          {/* Workshop Organization */}
+          {/* Community */}
           <div className="mt-10">
-            <Section id="workshops" title="Workshop Organization">
-              <ol className="space-y-3">
-                {WORKSHOP_ORGANIZATION.map((workshop, idx) => (
-                  <li
-                    key={idx}
-                    className="p-4 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60"
-                  >
-                    <div className="flex flex-wrap items-baseline gap-2">
-                      <h3 className="font-semibold text-lg leading-snug">
-                        {workshop.title}
-                      </h3>
-                      {workshop.status === "upcoming" && (
-                        <Pill>Upcoming</Pill>
-                      )}
-                    </div>
-                    <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                      {workshop.role} • {workshop.year}
-                    </div>
-                  </li>
-                ))}
-              </ol>
-            </Section>
-          </div>
-
-          {/* Service */}
-          <div className="mt-10">
-            <Section id="service" title="Service">
-              <ul className="space-y-2">
-                {SERVICES.map((s) => (
-                  <li
-                    key={s.role + s.venue}
-                    className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-3"
-                  >
-                    <div className="font-medium">{s.role}</div>
-                    <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                      {s.venue}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </Section>
-          </div>
-
-          {/* Expertise */}
-          <div className="mt-10">
-            <Section id="expertise" title="Expertise">
-              <div className="flex flex-wrap gap-2">
-                {SKILLS.map((s) => (
-                  <Badge key={s} variant="outline">
-                    {s}
-                  </Badge>
-                ))}
+            <Section id="community" title="Community">
+              <div className="space-y-6">
+                <div>
+                  <h4 className="font-semibold text-lg mb-3">Workshop Organization</h4>
+                  <ol className="space-y-3">
+                    {WORKSHOP_ORGANIZATION.map((workshop, idx) => (
+                      <li
+                        key={idx}
+                        className="p-4 rounded-xl border border-zinc-200/60 dark:border-zinc-800/60"
+                      >
+                        <div className="flex flex-wrap items-baseline gap-2">
+                          <h3 className="font-semibold text-lg leading-snug">
+                            {workshop.title}
+                          </h3>
+                          {workshop.status === "upcoming" && (
+                            <Pill>Upcoming</Pill>
+                          )}
+                        </div>
+                        <div className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                          {workshop.role} • {workshop.year}
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+                
+                <div>
+                  <h4 className="font-semibold text-lg mb-3">Service</h4>
+                  <ul className="space-y-2">
+                    {SERVICES.map((s) => (
+                      <li
+                        key={s.role + s.venue}
+                        className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-3"
+                      >
+                        <div className="font-medium">{s.role}</div>
+                        <div className="text-sm text-zinc-600 dark:text-zinc-400">
+                          {s.venue}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </Section>
           </div>
