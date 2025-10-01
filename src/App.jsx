@@ -29,7 +29,7 @@ import { Badge } from "./components/ui/badge";
 const PROFILE = {
   name: "Shweta Garg",
   title: "AI Research Lead",
-  location: "Santa Clara, CA",
+  location: "San Francisco, CA",
   tagline:
 	"At AWS, I lead applied research in code intelligence and interactive agents, shaping the Kiro IDE and Amazon Q Developer products. With 13+ years of experience, I have led cross-functional teams and scaled AI systems to deliver impactful machine learning solutions.",  
 email: "shwetagarg2006@gmail.com",
@@ -650,7 +650,7 @@ export default function App() {
 
           {/* Footer */}
           <footer className="mt-16 mb-10 text-sm text-zinc-600 dark:text-zinc-400">
-            © {year} {PROFILE.name}. Built with ❤️, React, and Kiro.
+            © {year} {PROFILE.name}. Built with ❤️, React, and QCLI.
           </footer>
         </main>
       </div>
