@@ -579,7 +579,7 @@ export default function App() {
             <Section id="community" title="Community">
               <div className="space-y-3">
                 {WORKSHOP_ORGANIZATION.map((workshop, idx) => (
-                  <li
+                  <div
                     key={idx}
                     className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-3"
                   >
@@ -604,11 +604,11 @@ export default function App() {
                         )}
                       </div>
                     </div>
-                  </li>
+                  </div>
                 ))}
                 
                 {SERVICES.map((s) => (
-                  <li
+                  <div
                     key={s.role + s.venue}
                     className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-3"
                   >
@@ -616,7 +616,7 @@ export default function App() {
                     <div className="text-sm text-zinc-600 dark:text-zinc-400">
                       {s.venue}
                     </div>
-                  </li>
+                  </div>
                 ))}
               </div>
             </Section>
