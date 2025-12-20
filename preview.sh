@@ -23,4 +23,4 @@ EOF
 echo "Starting dev server..."
 echo "Preview at: http://localhost:5173"
 echo "Press Ctrl+C to stop"
-npm run dev
+PATH="/opt/homebrew/bin:$PATH" npm run dev

@@ -59,10 +59,23 @@ const HIGHLIGHTS = [
   { icon: Briefcase, label: "Products", value: (<>Kiro IDE,<br />Q Developer</>) },
   { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />10+ papers</>) },
   { icon: Award, label: "Organizer", value: "Workshops @ AAAI & AMLC" },
-  { icon: Presentation, label: "Invited", value: (<>5+ talks &<br />panels</>) },
+  { icon: Presentation, label: "Invited", value: (<>8+ tutorials, <br />talks & panels</>) },
 ];
 
 const NEWS = [
+  {
+    date: "2025‑12‑05",
+    text: (
+      <>
+        Tutorial{" "}
+        <span className="font-medium">
+          "Next-Gen Code Development with Collaborative AI Agents"
+        </span>{" "}
+        has been accepted for presentation at The Web Conference 2026, Dubai.
+      </>
+    ),
+    href: null,
+  },
   {
     date: "2025‑09‑18",
     text: (
@@ -76,7 +89,7 @@ const NEWS = [
         >
           CodeAssistBench (CAB): Dataset & Benchmarking for Multi-turn Chat-Based Code Assistance
         </a>{" "}
-        accepted at NeurIPS 2025
+        accepted at NeurIPS 2025.
       </>
     ),
     href: null,
@@ -94,34 +107,7 @@ const NEWS = [
         >
           Next-Gen Code Development with Collaborative AI Agents
         </a>{" "}
-        accepted as a one-day event at AAAI-26, Singapore, Jan 20–27, 2026
-      </>
-    ),
-    href: null,
-  },
-  {
-    date: "2025‑08‑01", 
-    text: (
-      <>
-        Delivered talks on collaborative AI coding agents at{" "}
-        <a 
-          href="https://ai-reasoning.github.io/" 
-          target="_blank" 
-          rel="noreferrer"
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          KDD Day on AI Reasoning
-        </a>
-        ,{" "}
-        <a 
-          href="https://www.liglab.fr/en/laboratory-overview/scientific-animation/keynote-speeches/keynote-lig-behrooz-omidvar-tehrani-shweta-garg" 
-          target="_blank" 
-          rel="noreferrer"
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          Grenoble Informatics Laboratory (LIG)
-        </a>
-        , GitHub Copilot, Adobe HQ, and Uber
+        accepted at AAAI 2026, Singapore.
       </>
     ),
     href: null,
@@ -129,6 +115,12 @@ const NEWS = [
 ];
 
 const INVITED_TALKS = [
+  {
+    title: "Roundtable on AI for Code",
+    venue: "National University of Singapore",
+    date: "Jan 2026",
+    type: "Invited Roundtable",
+  },
   {
     title: "Agents Among Us: The Rise of Collaborative AI in Code and Conversation",
     venue: "Grenoble Informatics Laboratory (LIG)",
@@ -158,15 +150,23 @@ const INVITED_TALKS = [
   },
 ];
 
-const WORKSHOP_ORGANIZATION = [
+const TUTORIALS_WORKSHOPS = [
   {
-    title: "AAAI 2026 Workshop on Next-Gen Code Development with Collaborative AI Agents",
-    role: "Organizer",
-    year: "2026",
-    status: "upcoming",
+    title: "Next-Gen Code Development with Collaborative AI Agents",
+    venue: "The Web Conference 2026",
+    type: "Tutorial",
+    status: "accepted",
+  },
+  {
+    title: "Next-Gen Code Development with Collaborative AI Agents",
+    venue: "AAAI 2026",
+    type: "Workshop",
+    status: "accepted",
     href: "https://sites.google.com/view/next-gen-code-agents-aaai26",
   },
 ];
+
+const WORKSHOP_ORGANIZATION = [];
 
 const PUBLICATIONS = [
   {
@@ -235,7 +235,7 @@ const PROJECTS = [
 ];
 
 const SERVICES = [
-  { role: "Reviewer Service", venue: "ACL ARR 2025, ICLR 2025 Workshop (DL4C), TheWebConf 2024, and AMLC" },
+  { role: "Reviewer Service", venue: "AAAI 2026 Workshop (Code Agent), ACL ARR 2025, ICLR 2025 Workshop (DL4C), TheWebConf 2024, and AMLC" },
   { role: "Scientific Review Bar Raiser", venue: "Led the evaluation of 20+ A/B experiment designs across Amazon Search, Relevance, and UI features, ensuring high-quality scientific rigor and adherence to best practices" },
   { role: "Mentorship & Leadership", venue: "Mentored 100+ scientists and engineers through 1:1 guidance, cross-organizational initiatives, and leadership forums; featured in panel discussions at Women in Tech Day and COTA" },
 ];
@@ -330,6 +330,7 @@ export default function App() {
             <div className="hidden md:flex gap-6 text-sm">
               {[
                 ["Talks", "talks"],
+                ["Tutorials", "tutorials"],
                 ["Publications", "publications"],
                 ["Products", "projects"],
                 ["Community", "community"],
@@ -465,8 +466,49 @@ export default function App() {
             </Card>
           </div>
 
-          {/* Invited Talks */}
+          {/* Tutorials & Workshops */}
           <div className="mt-8">
+            <Section id="tutorials" title="Tutorials & Workshops">
+              <div className="space-y-2">
+                {TUTORIALS_WORKSHOPS.map((item, idx) => (
+                  <div key={idx} className="py-2 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-b-0">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <div className="font-medium text-sm leading-tight">
+                            {item.title}
+                          </div>
+                          {item.href && (
+                            <Button
+                              size="sm"
+                              variant="secondary"
+                              asChild
+                              className="h-auto px-1.5 py-1 text-xs min-h-0"
+                            >
+                              <a href={item.href} target="_blank" rel="noreferrer">
+                                Link
+                              </a>
+                            </Button>
+                          )}
+                          {item.status === "accepted" && (
+                            <Badge variant="secondary" className="text-xs">
+                              Accepted
+                            </Badge>
+                          )}
+                        </div>
+                      </div>
+                      <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
+                        {item.type} • {item.venue} {item.date}{item.location && `, ${item.location}`}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          </div>
+
+          {/* Invited Talks */}
+          <div className="mt-10">
             <Section id="talks" title="Invited Talks">
               <div className="space-y-2">
                 {INVITED_TALKS.map((talk, idx) => (
@@ -578,35 +620,6 @@ export default function App() {
           <div className="mt-10">
             <Section id="community" title="Community">
               <div className="space-y-3">
-                {WORKSHOP_ORGANIZATION.map((workshop, idx) => (
-                  <div
-                    key={idx}
-                    className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-3"
-                  >
-                    <div className="font-medium">Workshop Organization</div>
-                    <div className="text-sm text-zinc-600 dark:text-zinc-400">
-                      <div className="flex items-center gap-2">
-                        <span>{workshop.title}</span>
-                        {workshop.href && (
-                          <Button
-                            size="sm"
-                            variant="secondary"
-                            asChild
-                            className="h-auto px-1.5 py-1 text-xs min-h-0"
-                          >
-                            <a href={workshop.href} target="_blank" rel="noreferrer">
-                              Link
-                            </a>
-                          </Button>
-                        )}
-                        {workshop.status === "upcoming" && (
-                          <Pill>Upcoming</Pill>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-                
                 {SERVICES.map((s) => (
                   <div
                     key={s.role + s.venue}

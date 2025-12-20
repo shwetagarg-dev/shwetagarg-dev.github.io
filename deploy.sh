@@ -21,7 +21,7 @@ cat > index.html << 'EOF'
 EOF
 
 echo "🔨 Building production site..."
-npm run build
+PATH="/opt/homebrew/bin:$PATH" npm run build
 
 if [ $? -ne 0 ]; then
     echo "❌ Build failed! Fix errors and try again."
