@@ -64,6 +64,24 @@ const HIGHLIGHTS = [
 
 const NEWS = [
   {
+    date: "2026‑01‑27",
+    text: (
+      <>
+        Workshop{" "}
+        <a 
+          href="https://sites.google.com/view/next-gen-code-agents-aaai26" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          CodeMates: Next-Gen Code Development with Collaborative AI Agents
+        </a>{" "}
+        organized at AAAI 2026, Singapore.
+      </>
+    ),
+    href: null,
+  },
+  {
     date: "2025‑12‑05",
     text: (
       <>
@@ -94,27 +112,14 @@ const NEWS = [
     ),
     href: null,
   },
-  {
-    date: "2025‑08‑29",
-    text: (
-      <>
-        Workshop{" "}
-        <a 
-          href="https://sites.google.com/view/next-gen-code-agents-aaai26" 
-          target="_blank" 
-          rel="noreferrer"
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          Next-Gen Code Development with Collaborative AI Agents
-        </a>{" "}
-        accepted at AAAI 2026, Singapore.
-      </>
-    ),
-    href: null,
-  },
 ];
 
 const INVITED_TALKS = [
+  {
+    title: "Coding agents at AWS",
+    venue: "National University of Singapore",
+    date: "Jan 2026",
+  },
   {
     title: "Roundtable on AI for Code",
     venue: "National University of Singapore",
@@ -152,17 +157,17 @@ const INVITED_TALKS = [
 
 const TUTORIALS_WORKSHOPS = [
   {
+    title: "CodeMates: Next-Gen Code Development with Collaborative AI Agents",
+    venue: "AAAI 2026",
+    type: "Workshop",
+    status: "organized",
+    href: "https://sites.google.com/view/next-gen-code-agents-aaai26",
+  },
+  {
     title: "Next-Gen Code Development with Collaborative AI Agents",
     venue: "The Web Conference 2026",
     type: "Tutorial",
     status: "accepted",
-  },
-  {
-    title: "Next-Gen Code Development with Collaborative AI Agents",
-    venue: "AAAI 2026",
-    type: "Workshop",
-    status: "accepted",
-    href: "https://sites.google.com/view/next-gen-code-agents-aaai26",
   },
 ];
 
