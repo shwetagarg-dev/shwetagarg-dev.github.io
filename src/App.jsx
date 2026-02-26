@@ -31,7 +31,7 @@ const PROFILE = {
   title: "AI Research Lead",
   location: "San Francisco, CA",
   tagline:
-	"At AWS, I lead applied research in code intelligence and interactive agents, shaping the Kiro IDE and Amazon Q Developer products. With 13+ years of experience, I have led cross-functional teams and scaled AI systems to deliver impactful machine learning solutions.",  
+	"At AWS, I lead applied research in code intelligence and interactive agents, shaping the Kiro IDE & CLI and Amazon Q Developer products. With 13+ years of experience, I have led cross-functional teams and scaled AI systems to deliver impactful machine learning solutions.",  
 email: "shwetagarg2006@gmail.com",
   website: "",
   // If this image fails to load, a fallback with initials will render.
@@ -56,27 +56,45 @@ email: "shwetagarg2006@gmail.com",
 };
 
 const HIGHLIGHTS = [
-  { icon: Briefcase, label: "Products", value: (<>Kiro IDE,<br />Q Developer</>) },
-  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />10+ papers</>) },
-  { icon: Award, label: "Organizer", value: "Workshops @ AAAI & AMLC" },
+  { icon: Briefcase, label: "Products", value: (<>Kiro IDE & CLI,<br />Q Developer</>) },
+  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />10+ papers,<br />1+ blogs</>) },
+  { icon: Award, label: "Organizer", value: "3+ workshops" },
   { icon: Presentation, label: "Invited", value: (<>8+ tutorials, <br />talks & panels</>) },
 ];
 
 const NEWS = [
   {
-    date: "2026‑01‑27",
+    date: "2026‑02‑23",
     text: (
       <>
-        Workshop{" "}
+        Blog post{" "}
         <a 
-          href="https://sites.google.com/view/next-gen-code-agents-aaai26" 
+          href="https://kiro.dev/blog/hidden-inefficiencies-ai-coding/" 
           target="_blank" 
           rel="noreferrer"
           className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
         >
-          CodeMates: Next-Gen Code Development with Collaborative AI Agents
+          Hidden Inefficiencies in AI Coding Tools
         </a>{" "}
-        organized at AAAI 2026, Singapore.
+        published on Kiro.dev.
+      </>
+    ),
+    href: null,
+  },
+  {
+    date: "2026‑02‑18",
+    text: (
+      <>
+        Workshop on next-gen coding agents announced as part of{" "}
+        <a 
+          href="https://www.amazon.science/conferences-and-events/amazon-research-day-2026" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          Amazon Research Day 2026
+        </a>
+        .
       </>
     ),
     href: null,
@@ -86,31 +104,27 @@ const NEWS = [
     text: (
       <>
         Tutorial{" "}
-        <span className="font-medium">
+        <a 
+          href="https://www2026.thewebconf.org/accepted/tutorials.html#:~:text=Next%2DGen%20Code%20Development%20with%20Collaborative%20AI%20Agents" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
           "Next-Gen Code Development with Collaborative AI Agents"
-        </span>{" "}
+        </a>{" "}
         has been accepted for presentation at The Web Conference 2026, Dubai.
       </>
     ),
     href: null,
   },
+];
+
+const BLOG_POSTS = [
   {
-    date: "2025‑09‑18",
-    text: (
-      <>
-        Paper{" "}
-        <a 
-          href="https://arxiv.org/abs/2507.10646" 
-          target="_blank" 
-          rel="noreferrer"
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          CodeAssistBench (CAB): Dataset & Benchmarking for Multi-turn Chat-Based Code Assistance
-        </a>{" "}
-        accepted at NeurIPS 2025.
-      </>
-    ),
-    href: null,
+    title: "Hidden Inefficiencies in AI Coding Tools",
+    date: "Feb 2026",
+    excerpt: "Exploring the hidden costs and inefficiencies in current AI coding assistants and how next-generation tools can address them.",
+    href: "https://kiro.dev/blog/hidden-inefficiencies-ai-coding/",
   },
 ];
 
@@ -157,6 +171,13 @@ const INVITED_TALKS = [
 
 const TUTORIALS_WORKSHOPS = [
   {
+    title: "Next-Gen Coding Agents",
+    venue: "Amazon Research Day 2026",
+    type: "Workshop",
+    status: "organized",
+    href: "https://www.amazon.science/conferences-and-events/amazon-research-day-2026",
+  },
+  {
     title: "CodeMates: Next-Gen Code Development with Collaborative AI Agents",
     venue: "AAAI 2026",
     type: "Workshop",
@@ -168,6 +189,7 @@ const TUTORIALS_WORKSHOPS = [
     venue: "The Web Conference 2026",
     type: "Tutorial",
     status: "accepted",
+    href: "https://www2026.thewebconf.org/accepted/tutorials.html#:~:text=Next%2DGen%20Code%20Development%20with%20Collaborative%20AI%20Agents",
   },
 ];
 
@@ -226,9 +248,9 @@ const PUBLICATIONS = [
 
 const PROJECTS = [
   {
-    title: "Kiro - Agentic IDE",
+    title: "Kiro - Agentic IDE & CLI",
     summary:
-      "A new agentic IDE that focuses on Specification driven development",
+      "A new agentic IDE and CLI that focuses on Specification driven development",
     href: "https://kiro.dev/",
   },
   {
@@ -504,6 +526,43 @@ export default function App() {
                       </div>
                       <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
                         {item.type} • {item.venue} {item.date}{item.location && `, ${item.location}`}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          </div>
+
+          {/* Blog Posts */}
+          <div className="mt-10">
+            <Section id="blog" title="Blog Posts">
+              <div className="space-y-2">
+                {BLOG_POSTS.map((post, idx) => (
+                  <div key={idx} className="py-2 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-b-0">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <div className="font-medium text-sm leading-tight">
+                            {post.title}
+                          </div>
+                          <Button
+                            size="sm"
+                            variant="secondary"
+                            asChild
+                            className="h-auto px-1.5 py-1 text-xs min-h-0"
+                          >
+                            <a href={post.href} target="_blank" rel="noreferrer">
+                              <ExternalLink className="w-3 h-3" />
+                            </a>
+                          </Button>
+                        </div>
+                        <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">
+                          {post.excerpt}
+                        </p>
+                      </div>
+                      <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
+                        {post.date}
                       </div>
                     </div>
                   </div>
