@@ -57,17 +57,26 @@ email: "shwetagarg2006@gmail.com",
 
 const HIGHLIGHTS = [
   { icon: Briefcase, label: "Products", value: (<>Kiro IDE & CLI,<br />Q Developer</>) },
-  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />10+ papers,<br />1+ blogs</>) },
+  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />10+ papers,<br />2+ blogs</>) },
   { icon: Award, label: "Organizer", value: "3+ workshops" },
   { icon: Presentation, label: "Invited", value: (<>8+ tutorials, <br />talks & panels</>) },
 ];
 
 const NEWS = [
   {
-    date: "2026‑02‑23",
+    date: "2026‑02‑27",
     text: (
       <>
-        Blog post{" "}
+        Blog posts{" "}
+        <a 
+          href="https://kiro.dev/blog/surgical-precision-with-ast/" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          Surgical Precision with AST
+        </a>
+        {" "}and{" "}
         <a 
           href="https://kiro.dev/blog/hidden-inefficiencies-ai-coding/" 
           target="_blank" 
@@ -120,6 +129,12 @@ const NEWS = [
 ];
 
 const BLOG_POSTS = [
+  {
+    title: "Surgical Precision with AST",
+    date: "Feb 2026",
+    excerpt: "How Abstract Syntax Trees enable precise, semantic-aware code transformations in AI coding tools.",
+    href: "https://kiro.dev/blog/surgical-precision-with-ast/",
+  },
   {
     title: "Hidden Inefficiencies in AI Coding Tools",
     date: "Feb 2026",
