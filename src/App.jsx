@@ -57,12 +57,30 @@ email: "shwetagarg2006@gmail.com",
 
 const HIGHLIGHTS = [
   { icon: Briefcase, label: "Products", value: (<>Kiro IDE & CLI,<br />Q Developer</>) },
-  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />10+ papers,<br />2+ blogs</>) },
+  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />10+ papers,<br />3+ blogs</>) },
   { icon: Award, label: "Organizer", value: "3+ workshops" },
   { icon: Presentation, label: "Invited", value: (<>8+ tutorials, <br />talks & panels</>) },
 ];
 
 const NEWS = [
+  {
+    date: "2026‑03‑25",
+    text: (
+      <>
+        Blog post{" "}
+        <a 
+          href="https://kiro.dev/blog/copilots-to-coworkers-aaai/" 
+          target="_blank" 
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          From Copilots to Coworkers at AAAI
+        </a>{" "}
+        published on Kiro.dev.
+      </>
+    ),
+    href: null,
+  },
   {
     date: "2026‑02‑27",
     text: (
@@ -108,27 +126,15 @@ const NEWS = [
     ),
     href: null,
   },
-  {
-    date: "2025‑12‑05",
-    text: (
-      <>
-        Tutorial{" "}
-        <a 
-          href="https://www2026.thewebconf.org/accepted/tutorials.html#:~:text=Next%2DGen%20Code%20Development%20with%20Collaborative%20AI%20Agents" 
-          target="_blank" 
-          rel="noreferrer"
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          "Next-Gen Code Development with Collaborative AI Agents"
-        </a>{" "}
-        has been accepted for presentation at The Web Conference 2026, Dubai.
-      </>
-    ),
-    href: null,
-  },
 ];
 
 const BLOG_POSTS = [
+  {
+    title: "From Copilots to Coworkers at AAAI: The Gap Between Agentic Research and Production",
+    date: "Mar 2026",
+    excerpt: "Reflections from the AAAI 2026 workshop on the gap between agentic AI research and production-grade coding systems.",
+    href: "https://kiro.dev/blog/copilots-to-coworkers-aaai/",
+  },
   {
     title: "Surgical Precision with AST",
     date: "Feb 2026",
@@ -178,7 +184,7 @@ const INVITED_TALKS = [
   },
   {
     title: "AI Teammates for the Modern Developer",
-    venue: "AI Reasoning Day @ KDD",
+    venue: "AI Reasoning Day @ KDD 2025",
     date: "Aug 2025",
     href: "https://ai-reasoning.github.io/",
   },
@@ -211,6 +217,30 @@ const TUTORIALS_WORKSHOPS = [
 const WORKSHOP_ORGANIZATION = [];
 
 const PUBLICATIONS = [
+  {
+    title: "TRAJEVAL: Decomposing Code Agent Trajectories for Fine-Grained Diagnosis",
+    authors: ["M. Kim", "S. Cui", "D. Wang", "F. Farmahini Farahani", "Y. Zhuo", "B. Ray", "S. Garg", "R. Mukherjee", "V. Kumar"],
+    venue: "arXiv",
+    year: "2026",
+    links: [],
+    tags: ["Code Agents", "Evaluation"],
+  },
+  {
+    title: "CodeScout: Contextual Problem Statement Enhancement for Software Agents",
+    authors: ["M. Suri", "X. Li", "M. Shojaie", "S. Han", "C. Hsu", "S. Garg", "A. A. Deshmukh", "V. Kumar"],
+    venue: "arXiv",
+    year: "2026",
+    links: [],
+    tags: ["Software Agents", "Code Intelligence"],
+  },
+  {
+    title: "Textual Gradients are a Flawed Metaphor for Automatic Prompt Optimization",
+    authors: ["D. Melcer", "Q. Chen", "W. H. Chiang", "S. Garg", "P. Garg", "C. Bock"],
+    venue: "arXiv",
+    year: "2025",
+    links: [],
+    tags: ["Prompt Optimization", "LLMs"],
+  },
   {
     title: "CodeAssistBench (CAB): Dataset & Benchmarking for Multi-turn Chat-Based Code Assistance",
     authors: [
