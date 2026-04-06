@@ -220,7 +220,7 @@ const WORKSHOP_ORGANIZATION = [];
 const PUBLICATIONS = [
   {
     title: "TRAJEVAL: Decomposing Code Agent Trajectories for Fine-Grained Diagnosis",
-    authors: ["M. Kim", "S. Cui", "D. Wang", "F. Farmahini Farahani", "Y. Zhuo", "B. Ray", "S. Garg", "R. Mukherjee", "V. Kumar"],
+    authors: ["M. Kim", "D. Wang", "S. Cui", "F. Farmahini Farahani", "S. Garg", "B. Ray", "T. Zhuo", "R. Mukherjee", "V. Kumar"],
     venue: "arXiv",
     year: "2026",
     links: [
