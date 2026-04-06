@@ -57,17 +57,35 @@ email: "shwetagarg2006@gmail.com",
 
 const HIGHLIGHTS = [
   { icon: Briefcase, label: "Products", value: (<>Kiro IDE & CLI,<br />Q Developer</>) },
-  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />10+ papers,<br />3+ blogs</>) },
-  { icon: Award, label: "Organizer", value: "3+ workshops" },
-  { icon: Presentation, label: "Invited", value: (<>8+ tutorials, <br />talks & panels</>) },
+  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />8+ papers,<br />3+ blogs</>) },
+  { icon: Award, label: "Organizer", value: "2+ workshops" },
+  { icon: Presentation, label: "Invited", value: (<>10+ tutorials, <br />talks & panels</>) },
 ];
 
 const NEWS = [
   {
-    date: "2026‑03‑25",
+    date: "2026‑04‑06",
     text: (
       <>
-        Blog post{" "}
+        Two papers accepted at ACL 2026: 1) CODESTRUCT: Code Agents over Structured Action Spaces, and 2) CodeScout: Contextual Problem Statement Enhancement for Software Agents.
+      </>
+    ),
+    href: null,
+  },
+  {
+    date: "2026‑03‑16",
+    text: (
+      <>
+        Invited to present "Kiro: Programming in the Age of Agents" at BITS Pilani, India (CSIS WILP Faculty Development Program) on Apr 17.
+      </>
+    ),
+    href: null,
+  },
+  {
+    date: "Feb/Mar 2026",
+    text: (
+      <>
+        Blog posts{" "}
         <a 
           href="https://kiro.dev/blog/copilots-to-coworkers-aaai/" 
           target="_blank" 
@@ -75,17 +93,8 @@ const NEWS = [
           className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
         >
           From Copilots to Coworkers at AAAI
-        </a>{" "}
-        published on Kiro.dev.
-      </>
-    ),
-    href: null,
-  },
-  {
-    date: "2026‑02‑27",
-    text: (
-      <>
-        Blog posts{" "}
+        </a>
+        ,{" "}
         <a 
           href="https://kiro.dev/blog/surgical-precision-with-ast/" 
           target="_blank" 
@@ -94,7 +103,7 @@ const NEWS = [
         >
           Surgical Precision with AST
         </a>
-        {" "}and{" "}
+        , and{" "}
         <a 
           href="https://kiro.dev/blog/hidden-inefficiencies-ai-coding/" 
           target="_blank" 
@@ -104,24 +113,6 @@ const NEWS = [
           Hidden Inefficiencies in AI Coding Tools
         </a>{" "}
         published on Kiro.dev.
-      </>
-    ),
-    href: null,
-  },
-  {
-    date: "2026‑02‑18",
-    text: (
-      <>
-        Workshop on next-gen coding agents announced as part of{" "}
-        <a 
-          href="https://www.amazon.science/conferences-and-events/amazon-research-day-2026" 
-          target="_blank" 
-          rel="noreferrer"
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          Amazon Research Day 2026
-        </a>
-        .
       </>
     ),
     href: null,
@@ -150,6 +141,11 @@ const BLOG_POSTS = [
 ];
 
 const INVITED_TALKS = [
+  {
+    title: "Kiro: Programming in the Age of Agents - CLI, Autonomy, and Transformation",
+    venue: "BITS Pilani (CSIS WILP Faculty Development Program)",
+    date: "Apr 2026",
+  },
   {
     title: "Coding agents at AWS",
     venue: "National University of Singapore",
@@ -188,6 +184,11 @@ const INVITED_TALKS = [
     date: "Aug 2025",
     href: "https://ai-reasoning.github.io/",
   },
+  {
+    title: "Panel Discussion: Women in Tech Day",
+    venue: "COTA Healthcare",
+    date: "Apr 2025",
+  },
 ];
 
 const TUTORIALS_WORKSHOPS = [
@@ -222,15 +223,19 @@ const PUBLICATIONS = [
     authors: ["M. Kim", "S. Cui", "D. Wang", "F. Farmahini Farahani", "Y. Zhuo", "B. Ray", "S. Garg", "R. Mukherjee", "V. Kumar"],
     venue: "arXiv",
     year: "2026",
-    links: [],
+    links: [
+      { label: "PDF", href: "https://arxiv.org/pdf/2603.24631" }
+    ],
     tags: ["Code Agents", "Evaluation"],
   },
   {
     title: "CodeScout: Contextual Problem Statement Enhancement for Software Agents",
     authors: ["M. Suri", "X. Li", "M. Shojaie", "S. Han", "C. Hsu", "S. Garg", "A. A. Deshmukh", "V. Kumar"],
-    venue: "arXiv",
+    venue: "ACL",
     year: "2026",
-    links: [],
+    links: [
+      { label: "PDF", href: "https://arxiv.org/pdf/2603.05744" }
+    ],
     tags: ["Software Agents", "Code Intelligence"],
   },
   {
@@ -238,7 +243,9 @@ const PUBLICATIONS = [
     authors: ["D. Melcer", "Q. Chen", "W. H. Chiang", "S. Garg", "P. Garg", "C. Bock"],
     venue: "arXiv",
     year: "2025",
-    links: [],
+    links: [
+      { label: "PDF", href: "https://arxiv.org/pdf/2512.13598" }
+    ],
     tags: ["Prompt Optimization", "LLMs"],
   },
   {
