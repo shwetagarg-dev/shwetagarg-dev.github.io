@@ -57,7 +57,7 @@ email: "shwetagarg2006@gmail.com",
 
 const HIGHLIGHTS = [
   { icon: Briefcase, label: "Products", value: (<>Kiro IDE & CLI,<br />Q Developer</>) },
-  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />11+ papers,<br />3+ blogs</>) },
+  { icon: BookOpen, label: "Research", value: (<>5+ patents filed,<br />11+ papers,<br />3+ blogs</>) },
   { icon: Award, label: "Organizer", value: "2+ workshops" },
   { icon: Presentation, label: "Invited", value: (<>10+ tutorials, <br />talks & panels</>) },
 ];
