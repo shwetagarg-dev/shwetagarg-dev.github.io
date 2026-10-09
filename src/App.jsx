@@ -29,9 +29,9 @@ import { Badge } from "./components/ui/badge";
 const PROFILE = {
   name: "Shweta Garg",
   title: "AI Research Lead",
-  location: "San Francisco, CA",
+  location: "Santa Clara, CA",
   tagline:
-	"At AWS, I lead applied research in code intelligence and interactive agents, shaping the Kiro IDE & CLI and Amazon Q Developer products. With 13+ years of experience, I have led cross-functional teams and scaled AI systems to deliver impactful machine learning solutions.",  
+	"I lead applied science for Kiro's AI coding agents at AWS — setting science strategy and research priorities, building the team, and partnering with engineering and product leaders to bring new capabilities into production. Across 13+ years, I've built and scaled ML systems for coding agents, search & ranking, and question answering, including Amazon Search ranking improvements that delivered hundreds of millions of dollars in annualized incremental sales.",  
 email: "shwetagarg2006@gmail.com",
   website: "",
   // If this image fails to load, a fallback with initials will render.
@@ -57,9 +57,44 @@ email: "shwetagarg2006@gmail.com",
 
 const HIGHLIGHTS = [
   { icon: Briefcase, label: "Products", value: (<>Kiro IDE & CLI,<br />Q Developer</>) },
-  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />8+ papers,<br />3+ blogs</>) },
+  { icon: BookOpen, label: "Research", value: (<>5+ patents,<br />11+ papers,<br />3+ blogs</>) },
   { icon: Award, label: "Organizer", value: "2+ workshops" },
   { icon: Presentation, label: "Invited", value: (<>10+ tutorials, <br />talks & panels</>) },
+];
+
+const EXPERIENCE = [
+  {
+    role: "AI Research Lead · Kiro Science",
+    org: "Amazon Web Services (AWS)",
+    date: "Apr 2024 – Present",
+    bullets: [
+      "Lead the applied science team building Kiro's AI coding agents — owning science strategy, research roadmap, hiring, and talent development.",
+      "Partner with engineering and product leaders to launch coding-agent capabilities across CLI and IDE workflows, balancing near-term delivery with longer-term research investments.",
+      "Drive intelligent routing across model families to balance task quality, latency, and cost.",
+      "Lead agent evaluation and continuous improvement through benchmarks grounded in real user workflows, trajectory diagnostics, online quality signals, A/B experiments, and self-improving harnesses.",
+    ],
+  },
+  {
+    role: "Senior Applied Scientist",
+    org: "A9.com · Amazon Search",
+    date: "Jun 2019 – Apr 2024",
+    bullets: [
+      "Led applied science across autocomplete ranking, search discovery, and knowledge systems for Amazon's international marketplaces.",
+      "Delivered hundreds of millions of dollars in annualized incremental sales through ML ranking improvements for Search Autocomplete.",
+      "Expanded query coverage through multilingual transfer and transformer-based query generation.",
+      "Mentored scientists and served as a Search Weblab Bar Raiser, reviewing experiment design and analysis across the broader Search organization.",
+    ],
+  },
+  {
+    role: "Applied Scientist",
+    org: "Amazon",
+    date: "Apr 2016 – Jun 2019",
+    bullets: [
+      "Founding member of the team that built and launched question answering on Amazon product pages.",
+      "Developed neural models for semantic matching, answer selection, and query understanding, scaling the system across product categories and marketplaces.",
+      "Accelerated expansion to new categories by reducing model training cycles from months to days.",
+    ],
+  },
 ];
 
 const NEWS = [
@@ -67,7 +102,25 @@ const NEWS = [
     date: "2026‑04‑06",
     text: (
       <>
-        Two papers accepted at ACL 2026: 1) CODESTRUCT: Code Agents over Structured Action Spaces, and 2) CodeScout: Contextual Problem Statement Enhancement for Software Agents.
+        Two papers accepted at ACL 2026: 1){" "}
+        <a
+          href="https://arxiv.org/abs/2604.05407"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          CODESTRUCT: Code Agents over Structured Action Spaces
+        </a>
+        , and 2){" "}
+        <a
+          href="https://arxiv.org/abs/2603.05744"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
+        >
+          CodeScout: Contextual Problem Statement Enhancement for Software Agents
+        </a>
+        .
       </>
     ),
     href: null,
@@ -87,7 +140,7 @@ const NEWS = [
       <>
         Blog posts{" "}
         <a 
-          href="https://kiro.dev/blog/copilots-to-coworkers-aaai/" 
+          href="https://kiro.dev/blog/from-copilots-to-coworkers/"
           target="_blank" 
           rel="noreferrer"
           className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
@@ -124,7 +177,7 @@ const BLOG_POSTS = [
     title: "From Copilots to Coworkers at AAAI: The Gap Between Agentic Research and Production",
     date: "Mar 2026",
     excerpt: "Reflections from the AAAI 2026 workshop on the gap between agentic AI research and production-grade coding systems.",
-    href: "https://kiro.dev/blog/copilots-to-coworkers-aaai/",
+    href: "https://kiro.dev/blog/from-copilots-to-coworkers/",
   },
   {
     title: "Surgical Precision with AST",
@@ -219,8 +272,48 @@ const WORKSHOP_ORGANIZATION = [];
 
 const PUBLICATIONS = [
   {
-    title: "TRAJEVAL: Decomposing Code Agent Trajectories for Fine-Grained Diagnosis",
-    authors: ["M. Kim", "D. Wang", "S. Cui", "F. Farmahini Farahani", "S. Garg", "B. Ray", "T. Zhuo", "R. Mukherjee", "V. Kumar"],
+    title: "Teaching Agents to Code Reliably",
+    authors: ["M. A. Mohsin", "M. Kim", "K. Ruan", "S. Garg", "V. Kumar", "M. K. Ramanathan"],
+    venue: "arXiv",
+    year: "2026",
+    links: [
+      { label: "PDF", href: "https://arxiv.org/pdf/2610.03984" }
+    ],
+    tags: ["Code Agents", "Reliability"],
+  },
+  {
+    title: "AECP: Artifact-Exclusive Communication Protocol for Multi-Agent Code Generation",
+    authors: ["J. Xue", "Y. Wang", "X. Li", "L. Mo", "A. Sengupta", "S. Garg", "M. K. Ramanathan", "M. Kim"],
+    venue: "arXiv",
+    year: "2026",
+    links: [
+      { label: "PDF", href: "https://arxiv.org/pdf/2610.06481" }
+    ],
+    tags: ["Multi-Agent", "Code Generation"],
+  },
+  {
+    title: "CODESTRUCT: Code Agents over Structured Action Spaces",
+    authors: ["M. Kim", "J. Hsu", "D. Wang", "S. Garg", "V. Kumar", "M. K. Ramanathan"],
+    venue: "ACL",
+    year: "2026",
+    links: [
+      { label: "PDF", href: "https://arxiv.org/pdf/2604.05407" }
+    ],
+    tags: ["Code Agents", "Action Spaces"],
+  },
+  {
+    title: "Collaborative LLM Agents for End-to-End Software Development",
+    authors: ["S. Garg", "B. Omidvar-Tehrani", "S. Fu", "G. Guinet", "B. Ray"],
+    venue: "WWW",
+    year: "2026",
+    links: [
+      { label: "PDF", href: "https://doi.org/10.1145/3774905.3793914" }
+    ],
+    tags: ["Code Agents", "Software Development"],
+  },
+  {
+    title: "Coherence Collapse: Diagnosing Why Code Agents Fail After Reaching the Right Code",
+    authors: ["M. Kim", "D. Wang", "S. Cui", "F. Farmahinifarahani", "T. Y. Zhuo", "S. Garg", "B. Ray", "R. Mukherjee", "V. Kumar"],
     venue: "arXiv",
     year: "2026",
     links: [
@@ -408,9 +501,11 @@ export default function App() {
             </a>
             <div className="hidden md:flex gap-6 text-sm">
               {[
+                ["Publications", "publications"],
                 ["Talks", "talks"],
                 ["Tutorials", "tutorials"],
-                ["Publications", "publications"],
+                ["Blog", "blog"],
+                ["Experience", "experience"],
                 ["Products", "projects"],
                 ["Community", "community"],
                 ["Contact", "contact"],
@@ -545,8 +640,87 @@ export default function App() {
             </Card>
           </div>
 
-          {/* Tutorials & Workshops */}
+          {/* Publications */}
           <div className="mt-8">
+            <Section id="publications" title="Selected Publications">
+              <ol className="space-y-2">
+                {PUBLICATIONS.map((p, idx) => (
+                  <li
+                    key={idx}
+                    className="py-2 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-b-0"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-medium text-sm leading-tight">
+                            {p.title}
+                          </h3>
+                          {p.links?.map((l) => (
+                            <Button
+                              key={l.label}
+                              size="sm"
+                              variant="secondary"
+                              asChild
+                              className="h-auto px-1.5 py-1 text-xs min-h-0"
+                            >
+                              <a href={l.href} target="_blank" rel="noreferrer">
+                                {l.label}
+                              </a>
+                            </Button>
+                          ))}
+                        </div>
+                        <div className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">
+                          {p.authors.join(", ")}
+                        </div>
+                      </div>
+                      <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
+                        {p.venue} {p.year}
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </Section>
+          </div>
+
+          {/* Invited Talks */}
+          <div className="mt-10">
+            <Section id="talks" title="Invited Talks">
+              <div className="space-y-2">
+                {INVITED_TALKS.map((talk, idx) => (
+                  <div key={idx} className="py-2 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-b-0">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <div className="font-medium text-sm leading-tight">
+                            {talk.title}
+                          </div>
+                          {talk.href && (
+                            <Button
+                              size="sm"
+                              variant="secondary"
+                              asChild
+                              className="h-auto px-1.5 py-1 text-xs min-h-0"
+                            >
+                              <a href={talk.href} target="_blank" rel="noreferrer">
+                                Link
+                              </a>
+                            </Button>
+                          )}
+                        </div>
+                      </div>
+                      <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
+                        {talk.venue} • {talk.date}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          </div>
+
+          {/* Tutorials & Workshops */}
+          <div className="mt-10">
             <Section id="tutorials" title="Tutorials & Workshops">
               <div className="space-y-2">
                 {TUTORIALS_WORKSHOPS.map((item, idx) => (
@@ -623,82 +797,34 @@ export default function App() {
             </Section>
           </div>
 
-          {/* Invited Talks */}
+          {/* Experience */}
           <div className="mt-10">
-            <Section id="talks" title="Invited Talks">
-              <div className="space-y-2">
-                {INVITED_TALKS.map((talk, idx) => (
-                  <div key={idx} className="py-2 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-b-0">
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                          <div className="font-medium text-sm leading-tight">
-                            {talk.title}
-                          </div>
-                          {talk.href && (
-                            <Button
-                              size="sm"
-                              variant="secondary"
-                              asChild
-                              className="h-auto px-1.5 py-1 text-xs min-h-0"
-                            >
-                              <a href={talk.href} target="_blank" rel="noreferrer">
-                                Link
-                              </a>
-                            </Button>
-                          )}
-                        </div>
+            <Section id="experience" title="Experience">
+              <div className="space-y-4">
+                {EXPERIENCE.map((job, idx) => (
+                  <div
+                    key={idx}
+                    className="rounded-xl border border-zinc-200/60 dark:border-zinc-800/60 p-4"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                      <div className="font-semibold flex items-center gap-2">
+                        <Briefcase className="w-4 h-4" aria-hidden /> {job.role}
                       </div>
                       <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
-                        {talk.venue} • {talk.date}
+                        {job.date}
                       </div>
                     </div>
+                    <div className="mt-0.5 text-sm text-zinc-600 dark:text-zinc-400">
+                      {job.org}
+                    </div>
+                    <ul className="mt-2 list-disc pl-5 space-y-1 text-sm text-zinc-700 dark:text-zinc-300">
+                      {job.bullets.map((b, i) => (
+                        <li key={i}>{b}</li>
+                      ))}
+                    </ul>
                   </div>
                 ))}
               </div>
-            </Section>
-          </div>
-
-          {/* Publications */}
-          <div className="mt-10">
-            <Section id="publications" title="Selected Publications">
-              <ol className="space-y-2">
-                {PUBLICATIONS.map((p, idx) => (
-                  <li
-                    key={idx}
-                    className="py-2 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-b-0"
-                  >
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2">
-                          <h3 className="font-medium text-sm leading-tight">
-                            {p.title}
-                          </h3>
-                          {p.links?.map((l) => (
-                            <Button
-                              key={l.label}
-                              size="sm"
-                              variant="secondary"
-                              asChild
-                              className="h-auto px-1.5 py-1 text-xs min-h-0"
-                            >
-                              <a href={l.href} target="_blank" rel="noreferrer">
-                                {l.label}
-                              </a>
-                            </Button>
-                          ))}
-                        </div>
-                        <div className="mt-1 text-xs text-zinc-600 dark:text-zinc-400">
-                          {p.authors.join(", ")}
-                        </div>
-                      </div>
-                      <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
-                        {p.venue} {p.year}
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ol>
             </Section>
           </div>
 
