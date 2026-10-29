@@ -1,6 +1,6 @@
 # Shweta Garg - Portfolio
 
-AI Research Lead portfolio website built with React and Vite.
+Senior Applied Scientist (AWS) portfolio website built with React and Vite.
 
 ## Development
 

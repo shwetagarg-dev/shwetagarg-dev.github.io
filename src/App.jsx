@@ -17,6 +17,7 @@ import {
   ExternalLink,
   Presentation,
   GraduationCap,
+  Newspaper,
 } from "lucide-react";
 import { Card, CardContent } from "./components/ui/card";
 import { Button } from "./components/ui/button";
@@ -28,7 +29,7 @@ import { Badge } from "./components/ui/badge";
 
 const PROFILE = {
   name: "Shweta Garg",
-  title: "AI Research Lead",
+  title: "Senior Applied Scientist, AWS",
   location: "Santa Clara, CA",
   tagline:
 	"I lead applied science for Kiro's AI coding agents at AWS — setting science strategy and research priorities, building the team, and partnering with engineering and product leaders to bring new capabilities into production. Across 13+ years, I've built and scaled ML systems for coding agents, search & ranking, and question answering, including Amazon Search ranking improvements that delivered hundreds of millions of dollars in annualized incremental sales.",  
@@ -57,14 +58,14 @@ email: "shwetagarg2006@gmail.com",
 
 const HIGHLIGHTS = [
   { icon: Briefcase, label: "Products", value: (<>Kiro IDE & CLI,<br />Q Developer</>) },
-  { icon: BookOpen, label: "Research", value: (<>5+ patents filed,<br />11+ papers,<br />3+ blogs</>) },
-  { icon: Award, label: "Organizer", value: "2+ workshops" },
+  { icon: BookOpen, label: "Research", value: (<>5+ patents filed,<br />11+ papers,<br />4+ blogs</>) },
+  { icon: Award, label: "Organizer", value: "3+ workshops" },
   { icon: Presentation, label: "Invited", value: (<>10+ tutorials, <br />talks & panels</>) },
 ];
 
 const EXPERIENCE = [
   {
-    role: "AI Research Lead · Kiro Science",
+    role: "Senior Applied Scientist · Kiro Science",
     org: "Amazon Web Services (AWS)",
     date: "Apr 2024 – Present",
     bullets: [
@@ -99,6 +100,36 @@ const EXPERIENCE = [
 
 const NEWS = [
   {
+    date: "2026‑10‑20",
+    text: (
+      <>
+        Launched KiroTrace, Kiro's self-improvement system that mines agent traces and gates every fix with deterministic checks. Technical deep dive{" "}
+        <a href="https://kiro.dev/blog/how-kiro-fixes-itself/" target="_blank" rel="noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300">
+          How Kiro fixes itself, and how we keep the fixes honest
+        </a>
+        ; covered by The Deep View in a{" "}
+        <a href="https://thedeepview.com/articles/amazon-tests-a-safer-path-to-self-improving-ai" target="_blank" rel="noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300">
+          press release
+        </a>
+        {" "}and{" "}
+        <a href="https://archive.thedeepview.com/p/why-persistent-memory-could-transform-ai-agents" target="_blank" rel="noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300">
+          newsletter feature
+        </a>
+        .
+      </>
+    ),
+    href: null,
+  },
+  {
+    date: "2026‑10‑12",
+    text: (
+      <>
+        Our workshop "Next-Gen Code Development with Collaborative AI Agents (2nd Edition)" is accepted at The Web Conference 2027, Dublin, Ireland. Paper submissions due Jan 4, 2027.
+      </>
+    ),
+    href: null,
+  },
+  {
     date: "2026‑04‑06",
     text: (
       <>
@@ -125,54 +156,15 @@ const NEWS = [
     ),
     href: null,
   },
-  {
-    date: "2026‑03‑16",
-    text: (
-      <>
-        Invited to present "Kiro: Programming in the Age of Agents" at BITS Pilani, India (CSIS WILP Faculty Development Program) on Apr 17.
-      </>
-    ),
-    href: null,
-  },
-  {
-    date: "Feb/Mar 2026",
-    text: (
-      <>
-        Blog posts{" "}
-        <a 
-          href="https://kiro.dev/blog/from-copilots-to-coworkers/"
-          target="_blank" 
-          rel="noreferrer"
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          From Copilots to Coworkers at AAAI
-        </a>
-        ,{" "}
-        <a 
-          href="https://kiro.dev/blog/surgical-precision-with-ast/" 
-          target="_blank" 
-          rel="noreferrer"
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          Surgical Precision with AST
-        </a>
-        , and{" "}
-        <a 
-          href="https://kiro.dev/blog/hidden-inefficiencies-ai-coding/" 
-          target="_blank" 
-          rel="noreferrer"
-          className="text-blue-600 dark:text-blue-400 underline hover:text-blue-800 dark:hover:text-blue-300"
-        >
-          Hidden Inefficiencies in AI Coding Tools
-        </a>{" "}
-        published on Kiro.dev.
-      </>
-    ),
-    href: null,
-  },
 ];
 
 const BLOG_POSTS = [
+  {
+    title: "How Kiro fixes itself, and how we keep the fixes honest",
+    date: "Oct 2026",
+    excerpt: "KiroTrace: mining Kiro's own run traces to find failures, proposing one targeted prompt or tool change, and keeping it only if it clears a three-stage deterministic gate plus human review.",
+    href: "https://kiro.dev/blog/how-kiro-fixes-itself/",
+  },
   {
     title: "From Copilots to Coworkers at AAAI: The Gap Between Agentic Research and Production",
     date: "Mar 2026",
@@ -190,6 +182,25 @@ const BLOG_POSTS = [
     date: "Feb 2026",
     excerpt: "Exploring the hidden costs and inefficiencies in current AI coding assistants and how next-generation tools can address them.",
     href: "https://kiro.dev/blog/hidden-inefficiencies-ai-coding/",
+  },
+];
+
+const PRESS = [
+  {
+    outlet: "The Deep View",
+    title: "Amazon tests a safer path to self-improving AI",
+    type: "Press release",
+    date: "Oct 2026",
+    summary: "Coverage of KiroTrace, Kiro's self-improvement system that mines agent traces and gates every fix with deterministic checks.",
+    href: "https://thedeepview.com/articles/amazon-tests-a-safer-path-to-self-improving-ai",
+  },
+  {
+    outlet: "The Deep View",
+    title: "Amazon tests a safer path to self-improving AI",
+    type: "Newsletter feature",
+    date: "Oct 2026",
+    summary: "Featured section in The Deep View newsletter issue \"Why persistent memory could transform AI agents,\" covering KiroTrace.",
+    href: "https://archive.thedeepview.com/p/why-persistent-memory-could-transform-ai-agents",
   },
 ];
 
@@ -245,6 +256,12 @@ const INVITED_TALKS = [
 ];
 
 const TUTORIALS_WORKSHOPS = [
+  {
+    title: "Next-Gen Code Development with Collaborative AI Agents (2nd Edition)",
+    venue: "The Web Conference 2027, Dublin",
+    type: "Workshop",
+    status: "accepted",
+  },
   {
     title: "Next-Gen Coding Agents",
     venue: "Amazon Research Day 2026",
@@ -505,6 +522,7 @@ export default function App() {
                 ["Talks", "talks"],
                 ["Tutorials", "tutorials"],
                 ["Blog", "blog"],
+                ["Press", "press"],
                 ["Experience", "experience"],
                 ["Products", "projects"],
                 ["Community", "community"],
@@ -789,6 +807,44 @@ export default function App() {
                       </div>
                       <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
                         {post.date}
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Section>
+          </div>
+
+          {/* Press & Media */}
+          <div className="mt-10">
+            <Section id="press" title="Press & Media">
+              <div className="space-y-2">
+                {PRESS.map((item, idx) => (
+                  <div key={idx} className="py-2 border-b border-zinc-200/40 dark:border-zinc-800/40 last:border-b-0">
+                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <Newspaper className="w-4 h-4 flex-shrink-0" aria-hidden />
+                          <div className="font-medium text-sm leading-tight">
+                            {item.title}
+                          </div>
+                          <Button
+                            size="sm"
+                            variant="secondary"
+                            asChild
+                            className="h-auto px-1.5 py-1 text-xs min-h-0"
+                          >
+                            <a href={item.href} target="_blank" rel="noreferrer">
+                              <ExternalLink className="w-3 h-3" />
+                            </a>
+                          </Button>
+                        </div>
+                        <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">
+                          {item.summary}
+                        </p>
+                      </div>
+                      <div className="text-xs text-zinc-600 dark:text-zinc-400 sm:text-right sm:flex-shrink-0">
+                        {item.outlet} • {item.type} • {item.date}
                       </div>
                     </div>
                   </div>
